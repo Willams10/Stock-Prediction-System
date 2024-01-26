@@ -1,0 +1,1 @@
+TSLA stock is getting down lately. 
