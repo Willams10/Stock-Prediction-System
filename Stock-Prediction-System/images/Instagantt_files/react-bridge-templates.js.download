@@ -1,0 +1,1367 @@
+this["JST"] = this["JST"] || {};
+
+this["JST"]["react-bridge/add-floating-task"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div>\n\t<h4>New task</h4>\n\t<table class="table">\n\t\t<tr>\n\t\t\t<td><input type=text placeholder="Task name..." style="width:100%;margin-left:-5px"></td>\n\t\t</tr>\n\t</table>\n</div>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/autosort-message"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div id=\'autosort-message\' class=\'notification active expanded\' style=\'display:block\'>\n\t<div class=\'as-header\'><i class="fa fa-check"></i> Free edit mode enabled </div>\n\t<div class="as-content">\n\t\t<div class="text">\n\t  \t\tTasks won\'t be sorted by date until you finish editing\n\t  \t</div>\n\t  \t<button class="btn btn-success btn-mini sort-now"> Done, sort now <i class="fa fa-sort-amount-asc"></i></button><div class="clear"></div>\n\t</div>\n</div>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/bar-container-content"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
+function print() { __p += __j.call(arguments, '') }
+with (obj) {
+__p += '<div class=\'bar-container bar-container-draggable\' style=\'left:' +
+((__t = ( initial_margin )) == null ? '' : __t) +
+'px;width:' +
+((__t = ( duration )) == null ? '' : __t) +
+'px\'>\n\t';
+ if (typeof collapsed != "undefined" && collapsed) { ;
+__p += '\n\t\t<div class=\'bar-container-collapsed-overlay\' style=\'left:0px;right:0px\'>\n\t\t';
+ if (progress) { ;
+__p += '\n\t\t\t<div class="bar-progress">\n\t\t\t\t<div class="bar-progress-inner" style="width:' +
+((__t = ( progress )) == null ? '' : __t) +
+'%"></div>\n\t\t\t</div>\n\t\t';
+ } ;
+__p += '\n\t\t</div>\n\t\t<div class="left-arrow"><i class="fa fa-caret-down"></i></div>\n\t\t<div class="right-arrow"><i class="fa fa-caret-down"></i></div>\n\t';
+ } else { ;
+__p += '\n\t\t<div class="left-arrow"></div>\n\t\t<div class="right-arrow"></div>\n\t';
+ } ;
+__p += '\n</div>\n';
+ if (name!="") { ;
+__p += '\n\t<div class=\'task-name\' style=\'left:' +
+((__t = ( initial_margin+duration+10 )) == null ? '' : __t) +
+'px;\'>\n\t\t' +
+((__t = ( name )) == null ? '' : __t) +
+'\n\t</div>\n';
+ } ;
+
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/bar-container-small-content"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
+function print() { __p += __j.call(arguments, '') }
+with (obj) {
+__p += '<div class=\'bar-container-small bar-container-draggable\' style=\'left:' +
+((__t = ( initial_margin )) == null ? '' : __t) +
+'px;width:' +
+((__t = ( duration )) == null ? '' : __t) +
+'px\'>\n\t';
+ if (typeof collapsed != "undefined" && collapsed) { ;
+__p += '\n\t\t<div class=\'bar-container-small-collapsed-overlay\' style=\'left:0px;right:0px\'>\n\t\t';
+ if (progress) { ;
+__p += '\n\t\t\t<div class="bar-progress">\n\t\t\t\t<div class="bar-progress-inner" style="width:' +
+((__t = ( progress )) == null ? '' : __t) +
+'%"></div>\n\t\t\t</div>\n\t\t';
+ } ;
+__p += '\n\t\t</div>\n\t\t<div class="left-arrow"><i class="fa fa-caret-down"></i></div>\n\t\t<div class="right-arrow"><i class="fa fa-caret-down"></i></div>\n\t';
+ } else { ;
+__p += '\n\t\t<div class="left-arrow"></div>\n\t\t<div class="right-arrow"></div>\n\t';
+ } ;
+__p += '\n</div>\n';
+ if (name!="") { ;
+__p += '\n\t<div class=\'task-name\' style=\'left:' +
+((__t = ( initial_margin+duration+10 )) == null ? '' : __t) +
+'px;\'>\n\t\t' +
+((__t = ( name )) == null ? '' : __t) +
+'\n\t</div>\n';
+ } ;
+__p += '\n';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/bar-content-dropdown"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
+function print() { __p += __j.call(arguments, '') }
+with (obj) {
+__p += '<ul class="dropdown-menu dropdown-menu-custom" style="position:absolute;background:#fff;box-shadow:0 0 5px rgba(0,0,0,0.2);display:block;border-radius:0;">\n\t';
+ if (!completed) { ;
+__p += '\n\t<li style=\'border-width:0;\'>\n\t\t<a href=\'#\' class=\'set-completed\'><i class=\'fa fa-fw fa-check\'></i> Mark as completed</a>\n\t</li>\n\t';
+ } else { ;
+__p += '\n\t<li style=\'border-width:0;\'>\n\t\t<a href=\'#\' class=\'set-pending\'><i class=\'fa fa-fw fa-square-o\'></i> Mark as not completed</a>\n\t</li>\n\t';
+ } ;
+__p += '\n\t<li class="divider"></li>\n\t<li style=\'border-width:0;\'>\n\t\t<a href=\'#\' class=\'remove-dates\'><i class=\'fa fa-fw fa-times\'></i> Remove dates</a>\n\t</li>\n\t<li style=\'border-width:0;\'>\n\t\t<a href=\'#\' class=\'convert-to-milestone\'><i class=\'fa fa-fw fa-flag\'></i> Convert to milestone/task</a>\n\t</li>\n\t<li style=\'border-width:0;\'>\n\t\t<a href=\'#\' class=\'duplicate-task\'><i class=\'fa fa-fw fa-clone\'></i> Duplicate task</a>\n\t</li>\n\t<li class="dropdown-submenu" role="menu">\n\t\t<a href="javascript:void(0);" tabindex="-1"><i class=\'fa fa-fw fa-tint\'></i> Color </a>\n\t\t<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" style="margin-top:-100px">\n          <li style="height:80px">\n            <a href="javascript:void(0);" data-color="" class="set-color">\n              Default\n              <div class="muted">\n                <div class="color-box-mini color-ontime pull-left"></div> On time <div class="clearfix"></div>\n                <div class="color-box-mini color-overdue pull-left"></div> Overdue <div class="clearfix"></div>\n                <div class="color-box-mini color-completed pull-left"></div> Completed <div class="clearfix"></div>\n\t\t\t  </div>\n            </a>\n          </li>\n          <li class="divider"></li>\n          <li style="padding-left:10px">\n            \n              <div class="dark-pink pull-left color-box set-color" data-color="dark-pink"></div>\n            \n              <div class="dark-green pull-left color-box set-color" data-color="dark-green"></div>\n            \n              <div class="dark-blue pull-left color-box set-color" data-color="dark-blue"></div>\n            \n              <div class="dark-red pull-left color-box set-color" data-color="dark-red"></div>\n            \n              <div class="dark-teal pull-left color-box set-color" data-color="dark-teal"></div>\n            \n              <div class="dark-brown pull-left color-box set-color" data-color="dark-brown"></div>\n            \n              <div class="dark-orange pull-left color-box set-color" data-color="dark-orange"></div>\n            \n              <div class="dark-purple pull-left color-box set-color" data-color="dark-purple"></div>\n            \n              <div class="dark-warm-gray pull-left color-box set-color" data-color="dark-warm-gray"></div>\n\n              <div class="light-green pull-left color-box set-color" data-color="light-green"></div>\n            \n              <div class="light-blue pull-left color-box set-color" sdata-color="light-blue"></div>\n            \n              <div class="light-red pull-left color-box set-color" data-color="light-red"></div>\n            \n              <div class="light-teal pull-left color-box set-color" data-color="light-teal"></div>\n            \n              <div class="light-orange pull-left color-box set-color" data-color="light-orange"></div>\n            \n              <div class="light-purple pull-left color-box set-color" data-color="light-purple"></div>\n            \n            \n          </li>\n        </ul>\n\t</li>\n\t';
+ if (subtasks == 0 && !is_milestone) { ;
+__p += '\n\t<li class="dropdown-submenu" role="menu">\n\t\t<a href="#" tabindex="-1"><i class=\'fa fa-fw fa-refresh\'></i> Progress </a>\n\t\t<ul class="dropdown-menu" style="margin-top:-100px">\n\t\t\t<li><a tabindex="-1" href="javascript:void(0);" class="set-progress" data-progress="0%">0%</a></li>\n            <li><a tabindex="-1" href="javascript:void(0);" class="set-progress" data-progress="10%">10%</a></li>\n            <li><a tabindex="-1" href="javascript:void(0);" class="set-progress" data-progress="20%">20%</a></li>\n            <li><a tabindex="-1" href="javascript:void(0);" class="set-progress" data-progress="30%">30%</a></li>\n            <li><a tabindex="-1" href="javascript:void(0);" class="set-progress" data-progress="40%">40%</a></li>\n            <li><a tabindex="-1" href="javascript:void(0);" class="set-progress" data-progress="50%">50%</a></li>\n            <li><a tabindex="-1" href="javascript:void(0);" class="set-progress" data-progress="60%">60%</a></li>\n            <li><a tabindex="-1" href="javascript:void(0);" class="set-progress" data-progress="70%">70%</a></li>\n            <li><a tabindex="-1" href="javascript:void(0);" class="set-progress" data-progress="80%">80%</a></li>\n            <li><a tabindex="-1" href="javascript:void(0);" class="set-progress" data-progress="90%">90%</a></li>\n            <li><a tabindex="-1" href="javascript:void(0);" class="set-progress" data-progress="100%">100%</a></li>\n\t\t</ul>\n\t</li>\n\t<li style=\'border-width:0;\'>\n\t\t<a href=\'#\' class=\'create-dependency\'><i class=\'fa fa-fw fa-link\'></i> Create dependency</a>\n\t</li>\n\t';
+ } ;
+__p += '\n\t';
+ if (dependencies.length > 0) { ;
+__p += '\n\t\t<li class="divider"></li>\n\t\t';
+ _.each(dependencies,function(dependency){ ;
+__p += '\n\t\t\t<li>\n\t\t\t\t<a tabindex="-1" class="delete-left-dependency" href="javascript:void(0);" data-parent="' +
+((__t = ( dependency.get("id") )) == null ? '' : __t) +
+'">\n\t\t\t\t\tUnlink from ' +
+((__t = ( dependency.get("name") )) == null ? '' : __t) +
+'\n\t\t\t\t</a>\n\t\t\t</li>\n\t\t';
+ }); ;
+__p += '\n\t\t<li>\n\t\t\t<a href="javascript:void(0);" class="delete-left-dependency" data-parent="0">Unlink from all</a>\n\t\t</li>\n    ';
+ } ;
+__p += '\n\n</ul>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/bar-content"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
+function print() { __p += __j.call(arguments, '') }
+with (obj) {
+__p += '<div class=\'bar-draggable bar ' +
+((__t = ( status_class )) == null ? '' : __t) +
+' ' +
+((__t = ( completion_status_class )) == null ? '' : __t) +
+'\' style=\'left:' +
+((__t = ( initial_margin )) == null ? '' : __t) +
+'px;width:' +
+((__t = ( duration )) == null ? '' : __t) +
+'px\'>\n\t';
+ if (progress) { ;
+__p += '\n\t\t<div class="bar-progress">\n\t\t\t<div class="bar-progress-inner ' +
+((__t = ( status_class )) == null ? '' : __t) +
+' ' +
+((__t = ( completion_status_class )) == null ? '' : __t) +
+'" style="width:' +
+((__t = ( progress )) == null ? '' : __t) +
+'%"></div>\n\t\t</div>\n\t';
+ } else { ;
+__p += '\n\t\t<div class="bar-progress">\n\t\t\t<div class="bar-progress-inner ' +
+((__t = ( status_class )) == null ? '' : __t) +
+' ' +
+((__t = ( completion_status_class )) == null ? '' : __t) +
+'" style="width:0%"></div>\n\t\t</div>\n\t';
+ } ;
+__p += '\n\t<a href="javascript:void(0);" data-target="" data-toggle="dropdown" class=\'spawn\'></a>\n</div>\n<div class=\'connection-dot dot-left\' style=\'left:' +
+((__t = ( initial_margin_dot )) == null ? '' : __t) +
+'px;top:5px\'></div>\n<div class=\'task-configuration-icon\' style=\'left:' +
+((__t = ( initial_margin+duration+10 )) == null ? '' : __t) +
+'px;top:4px\'>\n\t<i class="fa fa-wrench"></i>\n</div>\n';
+ if (name!="") { ;
+__p += '\n\t<div class=\'task-name inspectlet-sensitive\' style=\'left:' +
+((__t = ( initial_margin+duration+10 )) == null ? '' : __t) +
+'px;\'>\n\t\t' +
+((__t = ( name )) == null ? '' : __t) +
+'\n\t</div>\n';
+ } ;
+
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/bar-milestone-content"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
+function print() { __p += __j.call(arguments, '') }
+with (obj) {
+__p += '<div class=\'bar\' style=\'left:' +
+((__t = ( initial_margin )) == null ? '' : __t) +
+'px;width:20px;background:transparent;\'>\n\t<div class="bar-milestone bar-milestone-' +
+((__t = ( App.Variables.column_width )) == null ? '' : __t) +
+' ' +
+((__t = ( status_class )) == null ? '' : __t) +
+'">\n\t</div>\n</div>\n<div class=\'connection-dot dot-left\' style=\'left:' +
+((__t = ( initial_margin_dot )) == null ? '' : __t) +
+'px;top:5px\'></div>\n<div class=\'task-configuration-icon\' style=\'left:' +
+((__t = ( initial_margin+duration+10 )) == null ? '' : __t) +
+'px;top:4px\'>\n\t<i class="fa fa-wrench"></i>\n</div>\n';
+ if (name!="") { ;
+__p += '\n\t<div class=\'task-name\' style=\'left:' +
+((__t = ( initial_margin+duration+10 )) == null ? '' : __t) +
+'px;\'>\n\t\t' +
+((__t = ( name )) == null ? '' : __t) +
+'\n\t</div>\n';
+ } ;
+
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/bar-real-completion-content"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div class=\'bar-real-completion\' style=\'left:' +
+((__t = ( initial_margin )) == null ? '' : __t) +
+'px;width:' +
+((__t = ( duration )) == null ? '' : __t) +
+'px\'>\n\t<div class="pull-right" style="margin-top: -10px;margin-right: 3px;color: #56cc27;">\n\t\t<i class="fa fa-check-square-o"></i>\n\t</div>\n</div>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/baseline-item"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<a href="javascript:void(0);">\n\t<div class="pull-right muted hover-ignore-muted delete-baseline">\n\t\t<i class="fa fa-trash"></i> Delete\n\t</div>\n\t<i class="fa fa-fw fa-clock-o"></i> ' +
+((__t = ( moment(date).format("DD MMM YYYY HH:mm") )) == null ? '' : __t) +
+'\n</a>\t';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/create-dependency"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div class="one-column-fields">\n    <p style="text-align:center">\n        You can search for predecessor or sucessor tasks. Search will return only tasks that already have dates assigned.\n    </p>\n    <input type=text class="create-dependency-typeahead">\n    <div style="height:150px"></div>\n</div>\n';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/defaults"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<h3>Default options for other projects</h3>\n<ul class="inline-menu unstyled">\n  <li class="subtitle">\n      Grouping\n  </li>\n  <li class="group-by group-by-priority-headings radio group-groupby" data-group="groupby">\n    <a href="javascript:void(0);">\n      <i class="fa fa-fw fa-dot-circle-o"></i> &nbsp; Group tasks by sections\n    </a>\n  </li>\n  <li class="group-by dont-group radio group-groupby" data-group="groupby">\n    <a href="javascript:void(0);">\n      <i class="fa fa-fw fa-circle-o"></i> &nbsp; Don\'t group tasks\n    </a>\n  </li>\n  <li class="divider"></li>\n  <li class="subtitle">\n      Sorting\n  </li>\n  <li class="sort-by sort-by-date radio group-sortby" data-group="sortby">\n    <a href="javascript:void(0);">\n      <i class="fa fa-fw fa-dot-circle-o"></i> &nbsp; Sort tasks by date (recommended)\n    </a>\n  </li>\n  <li class="sort-by sort-by-priority radio group-sortby" data-group="sortby">\n    <a href="javascript:void(0);">\n      <i class="fa fa-fw fa-circle-o"></i> &nbsp; Sort tasks by priority <span class="label label-info" style="font-size:10px;color:#fff;font-weight:300;">Beta</span><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n      <span class="muted">Reordering subtasks is not supported yet</span>\n    </a>\n  </li>\n  <li class="divider"></li>\n  <li class="subtitle">\n      Display\n  </li>\n  <li class="show-real-completion checkbox">\n    <a href="javascript:void(0);">\n      <i class="fa fa-fw fa-square-o"></i> &nbsp; Show real completion date along with original due date\n    </a>\n  </li>\n  <li class="show-subtasks checkbox">\n    <a href="javascript:void(0);">\n      <i class="fa fa-fw fa-check-square-o"></i> &nbsp; Show subtasks\n    </a>\n  </li>\n  <li class="">\n    <a href="javascript:void(0);"><i class="fa fa-fw fa-calendar-check-o"></i> &nbsp; Show completed tasks since: &nbsp; </a>\n    <select class="completed-since" name="" style="margin-bottom:0">\n        <option value="hidden">Hide completed tasks</option>\n        <option value="1week">Last week</option>\n        <option value="2weeks">Last 2 weeks</option>\n        <option value="1month">Last month</option>\n        <option value="2months">Last 2 months</option>\n        <option value="6months">Last 6 months</option>\n        <option value="all">All</option>\n\n    </select>\n  </li>\n  <li class="task-names-on-bars checkbox">\n    <a href="javascript:void(0);">\n      <i class="fa fa-fw fa-square-o"></i> &nbsp;\n      Show task names next to bars\n    </a>\n  </li>\n  <li class="divider"></li>\n  <li class="subtitle">\n      Management\n  </li>\n  <li style="">\n    <a class="lock-gap checkbox" href="javascript:void(0);">\n      <i class="fa fa-fw fa-square-o"></i> &nbsp;\n      Keep lag between dependencies when dragging\n    </a>\n  </li>\n  <li>\n    <a class="skip-weekends checkbox" href="javascript:void(0);">\n      <i class="fa fa-fw fa-check-square-o"></i> &nbsp;\n      Skip weekends (Sat & Sun) when dependant childs are pushed\n    </a>\n  </li>\n</ul>\n';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/delete-date"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div class="one-column-fields">\n    <p style="text-align:center">\n        This date is saved at workspace level <br>\n        (affect all projects)\n    </p>\n    <p>\n        <select class="remove-type">\n            <option value=0>Remove only for this project</option>\n            <option value=1>Remove from workspace (all projects)</option>\n        </select>\n    </p>\n</div>\n';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/dependency-line"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
+function print() { __p += __j.call(arguments, '') }
+with (obj) {
+
+ if (line_class=="dependency-line") { ;
+__p += '\n<div class=\'' +
+((__t = ( line_class )) == null ? '' : __t) +
+'\' data-parent=\'' +
+((__t = ( parent_id )) == null ? '' : __t) +
+'\' style=\'z-index:1;position:absolute;top:9px;left:' +
+((__t = ( left )) == null ? '' : __t) +
+'px;width:' +
+((__t = ( width )) == null ? '' : __t) +
+'px;height:0px;\';>\n\t<div class="dependency-line" style="position:absolute;top:' +
+((__t = ( top )) == null ? '' : __t) +
+'px;bottom:' +
+((__t = ( bottom )) == null ? '' : __t) +
+'px;width:0;left:-3px;height:' +
+((__t = ( height )) == null ? '' : __t) +
+'px">\n\t\t<div class=\'minidot-left\'></div>\n\t</div>\n\t\n\t<div class=\'minidot-right\'></div>\n</div>\n';
+ } else { ;
+__p += '\n\t<div class=\'' +
+((__t = ( line_class )) == null ? '' : __t) +
+'\' data-parent=\'' +
+((__t = ( parent_id )) == null ? '' : __t) +
+'\' style=\'z-index:1;position:absolute;bottom:' +
+((__t = ( bottom )) == null ? '' : __t) +
+'px;left:' +
+((__t = ( left )) == null ? '' : __t) +
+'px;width:' +
+((__t = ( width )) == null ? '' : __t) +
+'px;height:0px;\';>\n\t\t<div class="dependency-line-inverse" style="position:absolute;bottom:-2px;width:0;right:-2px;height:' +
+((__t = ( height )) == null ? '' : __t) +
+'px">\n\t\t\t<div class=\'minidot-left\'></div>\n\t\t</div>\n\t\t\n\t\t<div class=\'minidot-right\'></div>\n\t</div>\n';
+ } ;
+
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/dependency-svg"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
+function print() { __p += __j.call(arguments, '') }
+with (obj) {
+
+ if (line_class=="dependency-line") { ;
+__p += '\n<svg pointer-events="none" class="dependency-line" data-parent=\'' +
+((__t = ( parent_id )) == null ? '' : __t) +
+'\' style=\'z-index:1;position:absolute;top:0px;left:' +
+((__t = ( left )) == null ? '' : __t) +
+'px;width:' +
+((__t = ( width )) == null ? '' : __t) +
+'px;height:' +
+((__t = ( height )) == null ? '' : __t) +
+'px;top:' +
+((__t = ( top )) == null ? '' : __t) +
+'px;\'>\n\t<path class="connection-line" d="' +
+((__t = ( path_arr )) == null ? '' : __t) +
+'" stroke="#777777" stroke-width="1" fill="none" />\n\t<path class="connection-arrow" d="' +
+((__t = ( path_arrow )) == null ? '' : __t) +
+'" stroke="#777777" stroke-width="1" fill="#777777" />\n</svg>\n';
+ } else { ;
+__p += '\n\t<svg pointer-events="none" class="dependency-line-inverse" data-parent=\'' +
+((__t = ( parent_id )) == null ? '' : __t) +
+'\' style=\'z-index:1;position:absolute;bottom:' +
+((__t = ( bottom )) == null ? '' : __t) +
+'px;left:' +
+((__t = ( left )) == null ? '' : __t) +
+'px;width:' +
+((__t = ( width )) == null ? '' : __t) +
+'px;height:' +
+((__t = ( height )) == null ? '' : __t) +
+'px;\'>\n\t\t<path class="connection-line"  d="' +
+((__t = ( path_arr )) == null ? '' : __t) +
+'" stroke="#777777" stroke-width="1" fill="none" />\n\t\t<path class="connection-arrow" d="' +
+((__t = ( path_arrow )) == null ? '' : __t) +
+'" stroke="#777777" stroke-width="1" fill="#777777" />\n\t</svg>\n';
+ } ;
+
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/empty-bar-content"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<a href="javascript:void(0);" data-target="" class=\'spawn-empty todate\' title=\'Click to schedule\'></a>\n<ul class="dropdown-menu" style="margin-left:-80px">\n<li style=\'border-width:0;\'>\n  <a href=\'#\' class=\'todate\'>Schedule for <span class=\'schedule-for\'>today</span></a>\n</li>\n</ul>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/generate-image-button"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div class="btn-group">\n<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">\n  <i class=\'icon icon-picture icon-white\'></i>\n  Generate a new image\n  <span class="caret"></span>\n</a>\n<ul class="dropdown-menu">\n  <li><a href="javascript:void(0);" class="generate-days">Where columns are days</a></li>\n  <li><a href="javascript:void(0);" class="generate-weeks">Where columns are weeks</a></li></ul>\n</div>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/getting-started-tip"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
+function print() { __p += __j.call(arguments, '') }
+with (obj) {
+__p += '<div class="item ';
+ if (position==0) {print('active');} ;
+__p += '">\n\n\n    <div class="gs-header">\n      ';
+ if (title) { ;
+__p += '\n        <h2>' +
+((__t = ( title )) == null ? '' : __t) +
+'</h2>\n      ';
+ } ;
+__p += '\n\n      ';
+ if (gif) { ;
+__p += '\n      <div class="gif-container">\n        <img src="' +
+((__t = ( gif )) == null ? '' : __t) +
+'">\n      </div>\n      ';
+ } ;
+__p += '\n\n      ';
+ if (image) { ;
+__p += '\n      <div class="image-container">\n        <img class="static" src="' +
+((__t = ( image )) == null ? '' : __t) +
+'" style=\'';
+ if (typeof image_style != "undefined") {print(image_style);} ;
+__p += '\'>\n      </div>\n      ';
+ } ;
+__p += '\n\n    </div>\n    \n    <div style="font-size:10px">\n      ';
+ for (var i = 0;i<length;i++) { ;
+__p += '\n        ';
+ if (position == i) { ;
+__p += '\n          <i class="fa fa-circle"></i>&nbsp;\n        ';
+ } else { ;
+__p += '\n          <i class="fa fa-circle-o"></i>&nbsp;\n        ';
+ } ;
+__p += '\n      ';
+ } ;
+__p += '\n    </div>\n\n    <div class="gs-body">\n      ' +
+((__t = ( text )) == null ? '' : __t) +
+'\n    </div>\n      \n    ';
+ if (position == length-1) { ;
+__p += '\n      <p>\n        <a class="btn btn-success btn-finish-tour" href="" data-slide="next">Finish</a>\n      </p>\n    ';
+ } else { ;
+__p += '\n      <p>\n        <a class="btn btn-primary right" href="#carousel-gs" data-slide="next">Next</a>\n      </p>\n    ';
+ } ;
+__p += '\n    <br><br><br>\n</div>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/help-article"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
+function print() { __p += __j.call(arguments, '') }
+with (obj) {
+
+ if (gif || image) { ;
+__p += '\n  <div class="gs-header">\n\n    ';
+ if (gif) { ;
+__p += '\n      <div class="gif-container">\n        <img src="' +
+((__t = ( gif )) == null ? '' : __t) +
+'" style=\'';
+ if (typeof gif_style != "undefined") {print(gif_style);} ;
+__p += '\'>\n      </div>\n    ';
+ } ;
+__p += '\n\n    ';
+ if (image) { ;
+__p += '\n      <div class="image-container">\n        <img class="static" src="' +
+((__t = ( image )) == null ? '' : __t) +
+'" style=\'';
+ if (typeof image_style != "undefined") {print(image_style);} ;
+__p += '\'>\n      </div>\n    ';
+ } ;
+__p += '\n\n  </div>\n';
+ } ;
+__p += '\n  <div class="gs-body">\n    ';
+ if (title) { ;
+__p += '\n        <h2>' +
+((__t = ( title )) == null ? '' : __t) +
+'</h2>\n      ';
+ } ;
+__p += '\n    ' +
+((__t = ( text )) == null ? '' : __t) +
+'\n  </div>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/hint-sort-order"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div class="gs-body">\n<h3>Important: How do we order tasks?</h3>\n<p style="text-align:center">\n<img src="/img/chronological.png" width=200>\n</p>\nTasks are sorted automatically by chronological order (start date). This is the best visuaization to keep a Gantt Chart <b>organized</b> and <b>easy to read</b> with a cascade effect. When you drag a task bar around, it\'s automatically reordered. <br><br> Use the task list Drag & Drop to re-order tasks that starts on the <b>same day</b>, or to reorder <b>unscheduled tasks.</b><br><br>\n\n<b>When you change the vertical position manually</b> and it doesn\'t fit the chronological order, the "Free edit" mode is enabled, which won\'t re-order your tasks <b>while you make adjustments</b>. It\'s not a permanent state, so when finished, click on "Done, sort now".\n</div>\n<p style="text-align:center">\n\t<a href="javascript:void(0);" class="btn btn-success btn-finish-tour btn-close" href="">Got it!</a>\n</p>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/new-date"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div class="one-column-fields">\n    <p style="text-align:center">\n        Highlight dates\n    </p>\n    <p>\n        <input type="text" class="date-name" value="" placeholder="Name...">\n        <select class="date-is-holiday" class="is-holiday">\n            <option value=0>It\'s a working day</option>\n            <option value=1>It\'s a non-working day (holiday)</option>\n        </select>\n    </p>\n    <p>\n        <label class="checkbox">\n            <input type="checkbox" class="on-workspace" value="1">\n            Workspace level (all projects)\n        </label>\n    </p>\n    <p class="selectable-color">\n        <div class="highlight-1 pull-left color-box set-color selected" data-color="highlight-1"></div>\n        <div class="highlight-2 pull-left color-box set-color " data-color="highlight-2"></div>\n        <div class="highlight-3 pull-left color-box set-color " data-color="highlight-3"></div>\n        <div class="highlight-4 pull-left color-box set-color " data-color="highlight-4"></div>\n        <div class="highlight-5 pull-left color-box set-color " data-color="highlight-5"></div>\n        <div class="highlight-6 pull-left color-box set-color " data-color="highlight-6"></div>\n        <div class="highlight-7 pull-left color-box set-color " data-color="highlight-7"></div>\n        <div class="highlight-8 pull-left color-box set-color " data-color="highlight-8"></div>\n        <div class="highlight-9 pull-left color-box set-color " data-color="highlight-9"></div>\n        <div class="clearfix">\n\n        </div>\n    </p>\n</div>\n';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/new-inline-task-form"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div class="' +
+((__t = ( indent )) == null ? '' : __t) +
+' new-inline-task-form">\n\t<input type=text placeholder="New task name...">\n\t<div class="action-controls">\n\t\t<i class="fa fa-check"></i>\n\t\t<i class="fa fa-times"></i>\n\t</div>\n</div>\t';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/news-item"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
+function print() { __p += __j.call(arguments, '') }
+with (obj) {
+__p += '<li class="news-item-container">\n\t<div class="news-header ';
+ if (last_read >= created) {print('read');} ;
+__p += '">\n\t\t<i class=\'fa fa-fw fa-bullhorn\'></i><a href=\'' +
+((__t = ( link )) == null ? '' : __t) +
+'\' target=\'_blank\'> ' +
+((__t = ( title )) == null ? '' : __t) +
+' </a><span class="label label-warning">New!</span>\n\t\t<div class="news-header-date">' +
+((__t = ( moment(created).format("ddd DD MMM YYYY") )) == null ? '' : __t) +
+'</div>\n\t</div>\n\t<div class="news-body">\n\t\t' +
+((__t = ( description )) == null ? '' : __t) +
+'\n\t</div>\n</li>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/project-configuration"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div class="modal-header">\n\t<div class="group-name-container">\n\t\t<h3 class="group-name pull-left"></h3>\n\t\t<div class="pull-left">\n\t\t\t<i class="fa fa-pencil"></i>\t\n\t\t</div>\n\t\t<div class="pull-right share-container" style="display:none;">\n\t\t\t<button class="btn btn-success btn-share-group"><i class="fa fa-users"></i> Share</button>\n\t\t</div>\n\t\t<div class="clearfix"></div>\n\t</div>\n\t<div class="group-name-editor-container" style="display:none">\n\t\t<input type="text" class="group-name-input"> \n\t\t<a href="javascript:void(0);" class="btn btn-cancel-save-group-name">Cancel</a>\n\t</div>\n</div>\n<div class="modal-body" style="height:300px">\n\t<div class="group-config">\n\t    <p>Drag the list to change order. Tasks are sorted by start date, but sections are sorted by projects order</p>\n\t    <ul class="nav nav-tabs nav-stacked">\n\n\t    </ul>\n    </div>\n    <div class="project-config" style="display:none">\n    \t<p style="text-align:center">\n    \t\tDisconnect this project <br><br>\n    \t\t<a href="javascript:void(0)" class="btn btn-danger btn-disconnect">Disconnect</a>\n    \t</p>\n    \t\n    </div>\n    <div class="remote-group-config" style="display:none">\n    \t<p style="text-align:center">\n    \t\tDisconnect this group (you are not the owner) <br><br>\n    \t\t<a href="javascript:void(0)" class="btn btn-danger btn-disconnect">Disconnect</a>\n    \t</p>\n    \t\n    </div>\n</div>\n<div class="modal-footer">\n\t<div class="pull-left">\n\t\t<a href="javascript:void(0);" class="btn-delete-group"><i class="fa fa-trash"></i> Delete Group</a>\n\t</div>\n    <a href="javascript:void(0);" class="btn btn-close">Close</a>\n    <a href="javascript:void(0);" class="btn btn-success btn-save-configuration">Save</a>\n</div>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/project-list-item"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
+function print() { __p += __j.call(arguments, '') }
+with (obj) {
+__p += '<div class=\'pull-right hide loader loader-' +
+((__t = ( id )) == null ? '' : __t) +
+'\'><img src=\'/img/loading.gif\'></div>\n';
+ if (typeof type != "undefined") { ;
+__p += ' \n<div class=\'options\'><i class="fa fa-gear"></i></div>\n';
+ } ;
+__p += '\n';
+ if (typeof type != "undefined" && type == "workspace"){ ;
+__p += ' \n\t<i class="fa fa-user"></i> ';
+ } 
+;
+__p += '\n';
+ if (typeof type != "undefined" && type=="project") { ;
+__p += ' \n\t<i class="fa fa-list-ul"></i> \n';
+ } ;
+__p += '\n';
+ if (typeof type != "undefined" && type=="group" && (typeof subtype == "undefined" || subtype != "team")) { ;
+__p += ' \n\t<i class="fa fa-folder-open"></i> \n';
+ } ;
+__p += '\n';
+ if (typeof type != "undefined" && type=="group" && typeof subtype != "undefined" && subtype == "team") { ;
+__p += ' \n\t<i class="fa fa-users"></i> \n';
+ } ;
+__p += '\n';
+ if (typeof type == "undefined") { ;
+__p += ' \n\t<i class="fa fa-list-ul"></i> \n';
+ } ;
+__p += '\n' +
+((__t = ( name )) == null ? '' : __t) +
+' <br>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/projects-list-header"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<li class=\'title header\'>\n  <div class="title-inner title-inner-top">\n    <span class="import" data-url=\'/import-projects/asana\'>\n      Projects\n    </span>\n  </div>\n</li>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/prompt"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div class="modal-body">\n\n</div>\n<div class="modal-footer">\n    <a href="javascript:void(0)" class="btn btn-close">Close</a>\n    <a href="javascript:void(0)" class="btn btn-success">Continue</a>\n</div>\n';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/quickstart-help"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div class="close-button" style="cursor:pointer;position: absolute;\n    right: -15px;\n    top: -15px;\n    border: 2px solid #000;\n    padding: 0 2px;\n    border-radius: 13px;\n    background: rgba(0,0,0,0.1);\n    box-shadow: 0 0 10px;">\n\t<i class="fa fa-times" style="font-size:20px"></i>\n</div>\n<iframe></iframe>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/rectify-tasks"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div class="one-column-fields">\n    <h4>Some tasks were re-scheduled outside of Instagantt and they have dependent tasks that need to be adjusted</h4>\n    <p>\n        Would you like Instagantt to re-schedule dependent tasks?\n    </p>\n    <p style="text-align:center">\n        <img src="/img/reschedule.png" alt="" style="width:70%"/>\n    </p>\n    <p>\n        Ghost bars will represent the schedule without our proposed adjustments.\n    </p>\n    <p>The following tasks have changed, and should affect other tasks.</p>\n    <table class="table table-bordered to-rectify">\n\n    </table>\n</div>\n';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/snapshot-item"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<td>\n\t' +
+((__t = ( i )) == null ? '' : __t) +
+'\n</td>\n<td>\n\t<i class=\'fa fa-link fa-fw\'></i>  ' +
+((__t = ( moment(date).format("DD MMM YYYY HH:mm") )) == null ? '' : __t) +
+' \n</td>\n<td>\n\t<a href=\'/shared/' +
+((__t = ( id )) == null ? '' : __t) +
+'\' target=\'_blank\'><i class="fa fa-link"></i> &nbsp; Open </a>\n</td>\n<td>\n\t<a href="javascript:void(0);" class="load-baseline"><i class="fa fa-tasks"></i> &nbsp; Load as Baseline</a>\n</td>\n<td>\n\t<a href="javascript:void(0)" class="delete-snapshot"><i class="fa fa-trash-o"></i> &nbsp; Delete</a>\n</td>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/snapshot-ready"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<p style=\'margin-top:20px\'>\n\tYour snapshot has been successfully created. \n\t<br>\n\t<br>\n\t<b>To share:</b>\n\t<ul class=\'unstyled\'>\n\t\t<li>\n\t\t\t<i class=\'fa fa-fw fa-link\'></i> Current Snapshot direct link <br>\n\t\t\t<a href=\'' +
+((__t = ( snapshot_url )) == null ? '' : __t) +
+'\' target=\'_blank\'>' +
+((__t = ( snapshot_url )) == null ? '' : __t) +
+'</a><br>\n\t\t</li>\n\t\t<li>\n\t\t\t<i class=\'fa fa-fw fa-globe\'></i> Public Snapshots master link <br>\n\t\t\t<span class="muted">\n\t\t\t\tThis link will always redirect to the latest Public Snapshot taken\n\t\t\t</span>\n\t\t\t<a href="' +
+((__t = ( master_url )) == null ? '' : __t) +
+'" target=\'_blank\'>' +
+((__t = ( master_url )) == null ? '' : __t) +
+'</a>\n\t\t</li>\n\t</ul>\n</p>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/snapshots-table"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
+function print() { __p += __j.call(arguments, '') }
+with (obj) {
+__p += '<h4 style="text-align:center">\n\tPublic Snapshots\n</h4>\n<p style="text-align:center">Public Snapshots are shareable <b>read only</b> links to your Gantt chart on a given state. They don\'t require an account. Changes made to the project will not modify them.</p>\n<p style="text-align:center">\n\t<a href="javascript:void(0);" class="btn btn-success btn-new-snapshot btn-small">New snapshot</a>\n</p>\n\n';
+ if (snapshots.length != 0) { ;
+__p += '\n<table class="table table-bordered table-master-link" style="font-size:12px">\n\t<tr>\n\t\t<td>\n\t\t\tMaster link (always redirect to the latest snapshot):<a href=\'#\' target="_blank"></a>\n\t\t</td>\n\t</tr>\n</table>\n';
+ } ;
+__p += '\n<table class="table table-bordered table-snapshots" style="font-size:12px">\n\t<thead>\n\t\t<th>#</th>\n\t\t<th>Date</th>\n\t\t<th></th>\n\t\t<th></th>\n\t\t<th></th>\n\t</thead>\n</table>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/subscription-member"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div class="modal-body" style="background: #17ADDA;color: #fff;max-height: none;height: 100%;box-sizing: border-box;">\n\t<div class="subscription-limit-header" style="margin-top:150px">\n\t\t<h1>You are on a PRO account!</h1>\n\t</div>\n\t<p style="font-size:18px;text-align:center;margin-top:30px;">\n\t\tYour account manager is: <span style="font-weight:bold" id="subscription-account-manager"><i class="fa fa-spin fa-spinner"></i></span>\n\t</p>\n\t<p style="font-size:18px;text-align:center;margin-top:30px">\n\t\t<a href="javascript:void(0);" class="btn btn-close"> \n\t\t\tClose</a>\n\t\t<a href="javascript:void(0);" class="btn btn-danger btn-cancel-subscription"><i class="fa fa-times"></i> Remove me from this subscription</a>\n\t</p>\n</div>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/subscription-reduce-projects"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div class="modal-body" style="background: #17ADDA;color: #fff;max-height: none;height: 100%;box-sizing: border-box;">\n\t<div class="subscription-limit-header" style="margin-top:50px">\n\t\t<h3>Disconnect some projects and remove all your project groups</h3>\n\t</div>\n\t<ul class="disconnect-projects-list subscription-users-list unstyled" style="background:#fff;height:300px;overflow-y:scroll;">\n\n\t</ul>\n\t<h4><span id="projects-to-be-removed"></span> projects and <span id="groups-to-be-removed"></span> groups needs to be removed</h4>\n\t<p style="font-size:18px;text-align:center;margin-top:30px">\n\t\t<a href="javascript:void(0);" class="btn btn-close-reduce-projects"> \n\t\t\tGo back</a>\n\t\t<a href="javascript:void(0);" class="btn btn-success btn-success-reduce-projects"> \n\t\t\tYou\'re done! Enjoy</a>\t\n\t</p>\n</div>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/subscription-team"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div class="modal-body" style="max-height: none;height: 530px;box-sizing: border-box;background:#17ADDA;color:#fff;">\n\t<div class="subscription-team-header" style="">\n\t\t<h3>Subscription Management</h3>\n\t</div>\n\t<ul class="unstyled nav nav-pills">\n\t\t<li class="active">\n\t\t\t<a href="#team" data-toggle="pill">Team</a>\n\t\t</li>\n\t\t<li class="">\n\t\t\t<a href="#plan" data-toggle="pill">Plan & Payments</a>\n\t\t</li>\n<!-- \t\t<li class="payments-link">\n\t\t\t<a href="javascript:void(0);" data-toggle="pill">Payments</a>\n\t\t</li> -->\n\t</ul>\n\t<div class="tab-content">\n\t\t<div class="tab-pane active" id="team">\n\t\t\t<div id="subscription-workspaces-container" class="subscription-section">\n\t\t\t\t<div class="subscription-users-column-left">\n\t\t\t\t\t<div class="subscription-workspaces-header">\n\t\t\t\t\t\t<select id="subscription-workspace" style="width:240px">\n\t\t\t\t\t\t\t<option disabled value=0>Choose a Workspace/Organization</option>\n\t\t\t\t\t\t</select>\n\t\t\t\t\t\t<input type=text id="subscription-workspace-users-search" placeholder="Search users...">\n\t\t\t\t\t\t<i id="subscription-workspace-loading" class="hide fa fa-spinner fa-spin"></i>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="subscription-workspace-users-container">\n\t\t\t\t\t\t<ul class="unstyled subscription-users-list" id="subscription-workspace-users" style="background:#fff">\n\t\t\t\t\t\t\t<div style="padding:50px;text-align:Center">\n\t\t\t\t\t\t\t\t<i class="fa fa-search" style="font-size:32px"></i><br><br><br>\n\t\t\t\t\t\t\t\tFind users in your Asana workspace and upgrade them\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\n\t\t\t\t<div class="subscription-users-column-right">\n\t\t\t\t\t<div class="subscription-workspaces-header">\n\t\t\t\t\t\t<div class="pull-right counter">\n\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\tCurrent users in your subscription\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="subscription-workspace-users-container">\n\t\t\t\t\t\t<ul class="unstyled subscription-users-list" id="subscription-users" style="background:#fff">\n\n\t\t\t\t\t\t</ul>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class="tab-pane" id="plan">\n\t\t\t<div class="subscription-section">\n\t\t\t\t<div class="subscription-section-content" style="text-align:center;height:100%;overflow-y:scroll">\n\t\t\t\t\t<div class="alert alert-danger hide">\n\t\t\t\t\t\t<i class="fa fa-exclamation-triangle"></i> Last payment failed. Please update your credit card information\n\t\t\t\t\t</div>\n\t\t\t\t\t<h4>\n\t\t\t\t\t\tCurrent subscription\n\t\t\t\t\t</h4>\n\t\t\t\t\t<hr>\n\t\t\t\t\t<table class="table table-bordered table-striped not-mobilize" style="margin:0 auto;width:480px;font-size:12px">\n\t\t\t\t\t\t<colgroup>\n\t\t\t\t\t\t<col class="span1"></col>\n\t\t\t\t\t\t<col class="span7"></col>\n\t\t\t\t\t\t</colgroup>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td style="text-align:right">\n\t\t\t\t\t\t\t\tPaid users\n\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t<td style="text-align:left">\n\t\t\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t\t\t<span id="current-subscription-max-users"></span> users\n\t\t\t\t\t\t\t\t\t<button class="pull-right btn btn-info btn-small btn-edit-subscription">\n\t\t\t\t\t\t\t\t\t\t<i class="fas fa-pencil-alt"></i>\n\t\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t\t\t<div class="clearfix"></div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<div id="subscription-editor" style="display:none;">\n\t\t\t\t\t\t\t\t\t<select id="edit-subscription-dropdown" style="width:50px;margin-bottom:0">\n\n\t\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t\t\t<button class="btn btn-small btn-success btn-change-subscription">Save</button>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td style="text-align:right">In use</td>\n\t\t\t\t\t\t\t<td style="text-align:left"><span id="current-subscription-used-users"></span> users</td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td style="text-align:right">Plan price</td>\n\t\t\t\t\t\t\t<td style="text-align:left">$<span id="current-subscription-price"></span>/<span id="current-subscription-billing-cycle"></span></td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t\t<td style="text-align:left">\n\t\t\t\t\t\t\t\t<button class="btn btn-danger btn-mini btn-cancel-subscription">\n\t\t\t\t\t\t\t\t\t<i class="fa fa-trash"></i>\n\t\t\t\t\t\t\t\t\tCancel subscription\n\t\t\t\t\t\t\t\t</button>\n\t\t\t\t\t\t\t</td>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t</table>\n\t\t\t\t\t<hr>\n\t\t\t\t\t<h4>\n\t\t\t\t\t\tPayment method & details\n\t\t\t\t\t</h4>\n\t\t\t\t\t<button class="btn btn-info btn-update-credit-card">Update credit card</button>\n\t\t\t\t\t<button class="btn btn-info btn-update-billing-information">Update Billing Information</button>\n\t\t\t\t\t<hr>\n\t\t\t\t\t<h4>Payment history</h4>\n\t\t\t\t\t<hr>\n\t\t\t\t\t<table class="table table-bordered not-mobilize" id="payment-history" style="width:480px;margin:0 auto;font-size:12px">\n\t\t\t\t\t\t<thead>\n\t\t\t\t\t\t\t<th>Invoice ID</th>\n\t\t\t\t\t\t\t<th>Date</th>\n\t\t\t\t\t\t\t<th>Amount</th>\n\t\t\t\t\t\t\t<th></th>\n\t\t\t\t\t\t</thead>\n\t\t\t\t\t\t<tbody></tbody>\n\t\t\t\t\t</table>\n\t\t\t\t\t<div class="billing-information-modal modal hide">\n\t\t\t\t\t\t<div class="modal-header">\n\t\t\t\t\t\t\tUpdate Billing Information\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="modal-body" style="background: #fff !important">\n\t\t\t\t\t\t\t<table style="width:100%">\n\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t<td>Billing name</td>\n\t\t\t\t\t\t\t\t\t<td><input type=text class="billing-name"></td>\n\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t<td>Billing address</td>\n\t\t\t\t\t\t\t\t\t<td><input type=text class="billing-address"></td>\n\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t\t\t<td>Billing details</td>\n\t\t\t\t\t\t\t\t\t<td><input type=text class="billing-details"></td>\n\t\t\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\t</table>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="modal-footer">\n\t\t\t\t\t\t\t<a href="javascript:void(0);" class="btn-close-billing-information btn btn-small">Close</a>\n\t\t\t\t\t\t\t<a href="javascript:void(0);" class="btn btn-small btn-success btn-save-billing-information">Save</a>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class="tab-pane" id="payments">\n\t\t\t<div class="subscription-section">\n\t\t\t\t<div class="subscription-section-content">\n\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n<div class="modal-footer">\n\t<a href="javascript:void(0);" class="btn btn-close" data-dismiss="modal">Close</a>\n</div>\n';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/subscription-welcome"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div class="modal-body" style="background: #17ADDA;color: #fff;max-height: none;height: 100%;box-sizing: border-box;">\n\t<div class="subscription-limit-header" style="margin-top:150px">\n\t\t<h1>Your subscription is activated</h1>\n\t</div>\n\t<p style="font-size:18px;text-align:center;margin-top:30px;" class="add-team-title">\n\t\tNow you can add your team to your subscription\n\t</p>\n\t<p style="font-size:18px;text-align:center;margin-top:30px">\n\t\t<a href="javascript:void(0);" class="btn btn-close-welcome"> Close</a>\n\t\t<a href="javascript:void(0);" class="btn btn-success btn-add-team"><i class="fa fa-users"></i> Add your team</a>\n\t</p>\n</div>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/tags-header"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
+function print() { __p += __j.call(arguments, '') }
+with (obj) {
+__p += '<li class="tags-header" style="">\n\t<div class="pull-left" style="padding-top:0px;padding-left:0">\n\t\t<i class="fa fa-filter" style="margin:0 2px"></i>\n\t\tFilters\n\t\t\n\t</div>\n\t<div class="pull-right tab tab-users ' +
+((__t = ( users )) == null ? '' : __t) +
+'">\n\t\t<i class="fa fa-user"></i>\n\t\t\n\t</div>\n\t<div class="pull-right tab tab-tags ' +
+((__t = ( tags )) == null ? '' : __t) +
+'">\n\t\t<i class="fa fa-tag"></i>\n\t\t\n\t</div>\n\t';
+ if (color && color != "false") { ;
+__p += '\n\t\t<div class="project-color ' +
+((__t = ( color )) == null ? '' : __t) +
+'"></div>\t\n\t';
+ } ;
+__p += '\n</li>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/tags-user"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
+function print() { __p += __j.call(arguments, '') }
+with (obj) {
+__p += '<li class="tag" data-tag="' +
+((__t = ( user.id )) == null ? '' : __t) +
+'">\n  <!-- <i class="icon-white icon-user"></i>  -->\n  ';
+ if (user.id != "zero" && user.photo) { ;
+__p += '\n    <a href="javascript:void(0);" class="tooltip-handler" data-toggle="tooltip" data-placement="top" title="' +
+((__t = ( user.name )) == null ? '' : __t) +
+'">\n    <img src=\'' +
+((__t = ( user.photo.image_60x60 )) == null ? '' : __t) +
+'\' class=\'assigned-photo\'>\n    </a>\n  ';
+ } ;
+__p += '\n\n  ';
+ if (user.id != "zero" && !user.photo) { ;
+__p += '\n    <a href="javascript:void(0);" class="tooltip-handler" data-toggle="tooltip" data-placement="top" title="' +
+((__t = ( user.name )) == null ? '' : __t) +
+'">\n    <div class="non-photo pull-left" style=""> ';
+ print(nameAbbreviation(user.name)) ;
+__p += ' </div>\n    </a>\n  ';
+ } ;
+__p += '\n\n  ';
+ if (user.id == "zero") { ;
+__p += '\n    <div class="unassigned-photo pull-left"><i class="icon icon-user"></i></div>\n  ';
+ } ;
+__p += '\n  ' +
+((__t = ( user.name )) == null ? '' : __t) +
+'\n</li>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/task-details-content"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
+function print() { __p += __j.call(arguments, '') }
+with (obj) {
+__p += '<div class="title" style="border-bottom:0px solid #ccc;height:20px;padding:10px 20px;border-bottom:1px solid #efefef">\n  <div style="font-size:11px;color:#555;font-weight:normal" class="pull-left">\n    <!-- <a href="#" class="btn btn-success btn-mini" style="display:inline-block">Mark as completed</a>\n    <a href="#" class="btn btn-danger btn-mini" style="display:inline-block">Reactivate</a> -->\n    \n    <div class="title-menu dropdown" style="display:inline-block" data-toggle="tooltip" data-placement="bottom" title="Color">\n      \n        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" style="">\n          <i class="fa fa-tint fa-fw"></i>\n        </a>\n        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" style="">\n          <li>\n            <a href="#" data-color="" class="set-color">\n              Default\n              <div class="muted">\n                <div class="color-box-mini color-ontime pull-left"></div> On time <div class="clearfix"></div>\n                <div class="color-box-mini color-overdue pull-left"></div> Overdue <div class="clearfix"></div>\n                <div class="color-box-mini color-completed pull-left"></div> Completed <div class="clearfix"></div>\n              </div>\n            </a>\n          </li>\n          <li class="divider"></li>\n          <li style="padding-left:10px">\n            \n              <div class="dark-pink pull-left color-box set-color" data-color="dark-pink"></div>\n            \n              <div class="dark-green pull-left color-box set-color" data-color="dark-green"></div>\n            \n              <div class="dark-blue pull-left color-box set-color" data-color="dark-blue"></div>\n            \n              <div class="dark-red pull-left color-box set-color" data-color="dark-red"></div>\n            \n              <div class="dark-teal pull-left color-box set-color" data-color="dark-teal"></div>\n            \n              <div class="dark-brown pull-left color-box set-color" data-color="dark-brown"></div>\n            \n              <div class="dark-orange pull-left color-box set-color" data-color="dark-orange"></div>\n            \n              <div class="dark-purple pull-left color-box set-color" data-color="dark-purple"></div>\n            \n              <div class="dark-warm-gray pull-left color-box set-color" data-color="dark-warm-gray"></div>\n\n              <div class="light-green pull-left color-box set-color" data-color="light-green"></div>\n            \n              <div class="light-blue pull-left color-box set-color" sdata-color="light-blue"></div>\n            \n              <div class="light-red pull-left color-box set-color" data-color="light-red"></div>\n            \n              <div class="light-teal pull-left color-box set-color" data-color="light-teal"></div>\n            \n              <div class="light-orange pull-left color-box set-color" data-color="light-orange"></div>\n            \n              <div class="light-purple pull-left color-box set-color" data-color="light-purple"></div>\n            \n            \n          </li>\n        </ul>\n      \n    </div>\n    \n    <div class="title-menu dropdown" style="display:inline-block" data-toggle="tooltip" data-placement="bottom" title="Progress">\n      \n        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" style="">\n          <i class="fa fa-refresh fa-fw"></i>\n        </a>\n        ';
+ if (subtasks == 0) { ;
+__p += '\n        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">\n          <li><a href="javascript:void(0);" class="set-progress" data-progress="0%">0%</a></li>\n          <li><a href="javascript:void(0);" class="set-progress" data-progress="10%">10%</a></li>\n          <li><a href="javascript:void(0);" class="set-progress" data-progress="20%">20%</a></li>\n          <li><a href="javascript:void(0);" class="set-progress" data-progress="30%">30%</a></li>\n          <li><a href="javascript:void(0);" class="set-progress" data-progress="40%">40%</a></li>\n          <li><a href="javascript:void(0);" class="set-progress" data-progress="50%">50%</a></li>\n          <li><a href="javascript:void(0);" class="set-progress" data-progress="60%">60%</a></li>\n          <li><a href="javascript:void(0);" class="set-progress" data-progress="70%">70%</a></li>\n          <li><a href="javascript:void(0);" class="set-progress" data-progress="80%">80%</a></li>\n          <li><a href="javascript:void(0);" class="set-progress" data-progress="90%">90%</a></li>\n          <li><a href="javascript:void(0);" class="set-progress" data-progress="100%">100%</a></li>\n        </ul>\n        ';
+ } else { ;
+__p += '\n          <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">\n            <li>\n              <a href="javascript:void(0);">\n                <b>This task has subtasks</b><br>\n                Progress is automatically calculated <br>based on its subtasks\n              </a>\n            </li>\n          </ul>\n        ';
+ } ;
+__p += '\n      \n    </div>\n    <div class="title-menu add-tag-handler" style="display:inline-block"  data-toggle="tooltip" data-placement="bottom" title="Tags">\n      <a href="javascript:void(0);">\n        <i class="fa fa-tags fa-fw"></i>\n      </a>\n    </div>\n    <div class="title-menu dropdown" style="display:inline-block" data-toggle="tooltip" data-placement="bottom" title="Milestone">\n      \n        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">\n          <i class="fa fa-flag fa-fw"></i>\n        </a>\n        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" style="margin-left:-100px">\n          <li>\n            <a href=\'javascript:void(0);\' class="convert-type"> Convert to ';
+ if (!is_milestone) { print("Milestone"); } else { print("Task"); };
+__p += '</a>\n          </li>\n        </ul>\n      \n    </div>\n    <!-- <div class="title-menu add-subtask-toggle" style="display:inline-block">\n      <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Subtask">\n        <i class="fa fa-list-ul fa-fw"></i>\n      </a>\n    </div> -->\n\n    <div class="title-menu dropdown" style="display:inline-block;">\n      <a href="https://app.asana.com/0/' +
+((__t = ( id )) == null ? '' : __t) +
+'/' +
+((__t = ( id )) == null ? '' : __t) +
+'" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Open in Asana">\n        <img src="/img/asana-new-icon.png" width=12 style="margin-top:-2px">\n      </a>\n    </div>\n\n    <div class="title-menu dropdown" style="display:inline-block;">\n      <a href=\'javascript:void(0);\' class=\'duplicate-task\' data-toggle="tooltip" data-placement="bottom" title="Duplicate task"><i class=\'fa fa-fw fa-clone\'></i></a>\n    </div>\n\n    <div class="title-menu dropdown" style="display:inline-block;">\n      <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" style=""><i class="fa fa-trash-o fa-fw"></i></a>\n      <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" style="margin-left:-100px">\n        <li><a href="javascript:void(0)" class="btn-delete">Yes please, delete</a></li>\n      </ul>\n    </div>\n\n  </div>\n  <div style="font-size:11px;color:#888;cursor:pointer" class="close-task-details pull-right">\n    <i class="icon icon-remove"></i>\n  </div>\n  <div style="clear:both"></div>\n</div>\n<div class="inner-content">\n  ';
+ if (progress && progress!="0%") { ;
+__p += '\n    <!-- <div style="border:1px solid #ccc;border-radius:3px;">\n      <div style="background:green;height:10px;width:' +
+((__t = ( progress )) == null ? '' : __t) +
+'"></div>\n    </div> -->\n    <div class="progress progress-success progress-striped" style="border-radius:0;height:15px;margin-bottom:0;">\n      <div class="bar" style="font-size: 11px;line-height: 13px;font-weight: bold;width: ' +
+((__t = ( progress )) == null ? '' : __t) +
+'">' +
+((__t = ( progress )) == null ? '' : __t) +
+'</div>\n    </div>\n  ';
+ } ;
+__p += '\n  ';
+ if (projects.length > 0) { ;
+__p += ' \n    ';
+ var project_names = _.pluck(projects,"name").join(", "); ;
+__p += '\n    <div class="muted project-name">\n      On ' +
+((__t = ( project_names )) == null ? '' : __t) +
+'\n    </div>\n  ';
+ } ;
+__p += '\n  <table class="table task-name">\n    <tr>\n      <td>\n        <h4>\n          ';
+ if(!eval(completed)) { ;
+__p += '\n            <i class="toggle-completed fa fa-square-o" style=""></i>\n          ';
+ } else { ;
+__p += '\n            <i class="toggle-completed fa fa-check-square-o" style=""></i>\n          ';
+ } ;
+__p += ' \n        </h4>\n      </td>\n      <td>\n        <div class="task-name-info">\n          <h4>\n            <div class="pull-right command">\n              <a href=\'javascript:void(0);\' class="change-task-name-handler btn btn-mini"><i class="fa fa-pencil"></i></a>\n            </div>\n            ' +
+((__t = ( name )) == null ? '' : __t) +
+'\n          </h4>\n        </div>\n        <div class="change-task-name" style="display:none">\n          <h4>\n            <input type=text class="input-task-name" value="' +
+((__t = ( name )) == null ? '' : __t) +
+'"> <br>\n            <button class="btn btn-small btn-save-task-name btn-success">Save</button>\n            <button class="btn btn-small btn-cancel-task-name">Cancel</button>\n          </h4>\n        </div>\n      </td>\n    </tr>\n  </table>\n  ';
+ if (supplier=="asana1") { ;
+__p += '\n  <div style="padding-left:20px;font-size:12px;margin-bottom:10px">\n    ';
+ if (projects.length > 0) { ;
+__p += '\n      <a style="" href="https://app.asana.com/0/' +
+((__t = ( projects[0].id )) == null ? '' : __t) +
+'/' +
+((__t = ( id )) == null ? '' : __t) +
+'" target="_blank">Open in Asana</a>\n    ';
+ } ;
+__p += '\n  </div>\n  ';
+ } ;
+__p += '\n  <table class="table task-values">\n\n    <tr>\n      <td class="">\n        ';
+ if (user!="" && user.photo) { ;
+__p += '\n          <div class="pull-right user-photo"><img src="' +
+((__t = ( user.photo.image_60x60 )) == null ? '' : __t) +
+'"></div>\n        ';
+ } else { ;
+__p += '\n          <i class="fa fa-user fa-fw">\n        ';
+ } ;
+__p += '\n      </td>\n      <td class="">\n        <div class="current-user">\n          ';
+ user.name ? print(user.name) : print("Unassigned") ;
+__p += '\n          \n          <div class="pull-right command">\n            <a href=\'javascript:void(0);\' class="change-user-handler btn btn-mini"><i class="fa fa-pencil"></i></a>\n          </div>\n        </div>\n        <div class="change-user-container" style="display:none">\n          <!-- <input type=text class="change-user-input" style="width: 100px;padding: 2px 5px;vertical-align: baseline;margin:0"> -->\n          <input type=text class="change-user-input" style="width: 100px;padding: 2px 5px;vertical-align: baseline;margin:0">\n          <button class="btn btn-small btn-unassigned">Unassigned</button> <img src="/img/spinner.gif" class="typeahead-user-loading" style="display:none;width:16px">\n        </div>\n      </td>\n    </tr>\n\n    <tr>\n      <td class="interior">\n        <i class="fa fa-outdent fa-fw"></i>\n      </td>\n      <td>\n        <div class="parent-info">\n          <div class="pull-right command">\n            <a href=\'javascript:void(0);\' class="change-parent-handler btn btn-mini"><i class="fa fa-pencil"></i></a>\n          </div>\n          <span>Parent: </span><span class="parent-name">No parent</span>\n        </div>\n        <div class="parent-edit hide">\n          <select class="parent-picker" style="font-size:10px;">\n            \n          </select>\n          <a href="javascript:void(0);" class="change-parent-handler" style="font-size:11px">Cancel</a>\n        </div>\n      </td>\n    </tr>\n\n    ';
+ if (is_milestone) { ;
+__p += '\n    <tr>\n      <td class="interior">\n        <i class="fa fa-flag fa-fw"></i>\n      </td>\n      <td>\n          Type: Milestone\n        <div class="pull-right command">\n          <a href=\'javascript:void(0);\' class="convert-type btn btn-mini"><i class="fa fa-gear"></i> Convert to task </a>\n        </div>\n      </td>\n    </tr>\n    ';
+ } ;
+__p += '\n\n    ';
+ if (color) { ;
+__p += '\n    <tr>\n      <td class="interior">\n        <i class="fa fa-tint fa-fw"></i>\n      </td>\n      <td>\n          <div class="color-box-mini ' +
+((__t = ( color )) == null ? '' : __t) +
+' pull-left"></div> ' +
+((__t = ( color )) == null ? '' : __t) +
+'\n        </div>\n      </td>\n    </tr>\n    ';
+ } ;
+__p += '\n\n    <tr>\n      <td class="interior">\n        <i class="fa fa-calendar fa-fw"></i>\n      </td>\n      <td class="interior">\n        ';
+ if (start=="" || due =="") { ;
+__p += '\n          <div class="pull-right command">\n              <a href=\'javascript:void(0);\' class="set-dates btn btn-mini"><i class="fa fa-pencil"></i></a>\n          </div>\n          Not scheduled\n        ';
+ } else { ;
+__p += '\n          ';
+ if (start==due) { ;
+__p += '\n            ' +
+((__t = ( moment(due).format("DD MMM YYYY") )) == null ? '' : __t) +
+'\n          ';
+ } else { ;
+__p += '\n            ' +
+((__t = ( moment(start).format("DD MMM YYYY") )) == null ? '' : __t) +
+' to ' +
+((__t = ( moment(due).format("DD MMM YYYY") )) == null ? '' : __t) +
+'\n          ';
+ } ;
+__p += '\n          &nbsp;\n          <div class="pull-right command">\n            <a href=\'javascript:void(0);\' class="delete-dates btn btn-mini"><i class="fa fa-trash-o"></i></a>\n          </div>\n          <div class="pull-right command">\n            <a href=\'javascript:void(0);\' class="set-dates btn btn-mini"><i class="fa fa-pencil"></i></a>\n          </div>\n        ';
+ } ;
+__p += '\n      </td>\n    </tr>\n    <tr class="change-dates hide">\n      <td class="interior"></td>\n      <td>\n        <div class="input-daterange" id="datepicker">\n            ';
+ if (due!="" && start!="") { ;
+__p += '\n              <input type="text" class="input-small" name="start" value="' +
+((__t = ( moment(start).format('DD/MM/YYYY') )) == null ? '' : __t) +
+'"/>\n              <span class="add-on">to</span>\n              <input type="text" class="input-small" name="end" value="' +
+((__t = ( moment(due).format('DD/MM/YYYY') )) == null ? '' : __t) +
+'" />\n            ';
+ } else { ;
+__p += '\n              <input type="text" class="input-small" name="start" value=""/>\n              <span class="add-on">to</span>\n              <input type="text" class="input-small" name="end" value="" />\n            ';
+ } ;
+__p += '\n        </div>\n        <div>\n          <div class="pull-right">\n            <button class="btn btn-small btn-cancel-change-dates">Cancel</button>\n            <button class="btn btn-small btn-success btn-save-change-dates">Save</button>\n          </div>\n          <div class="clearfix"></div>\n        </div>\n      </td>\n    </tr>\n    <tr>\n      <td class="interior">\n        <i class="fa fa-clock-o fa-fw"></i>\n      </td>\n      <td class="interior">\n        ';
+ if (estimated_hours.estimated_hours=="" || estimated_hours.estimated_hours == 0) { ;
+__p += '\n          <div class="pull-right command">\n              <a href=\'javascript:void(0);\' class="set-estimated-hours btn btn-mini"><i class="fa fa-pencil"></i></a>\n          </div>\n          Estimated hours\n        ';
+ } else { ;
+__p += '\n            ' +
+((__t = ( estimated_hours.estimated_hours )) == null ? '' : __t) +
+' hours\n            ';
+ if (App.Variables.skip_weekends && start != "" && due != "") { ;
+__p += '\n              (' +
+((__t = ( (Number(estimated_hours.estimated_hours)/Number(workingDaysLength(moment(start).toDate(),moment(due).toDate())+1)).toPrecision(3) )) == null ? '' : __t) +
+' hours per day)\n            ';
+ } else if (!App.Variables.skip_weekends && start != "" && due != "") { ;
+__p += '\n              (' +
+((__t = ( (Number(estimated_hours.estimated_hours)/Number(daysDiff(moment(due),moment(start))+1)).toPrecision(3) )) == null ? '' : __t) +
+' hours per day)\n            ';
+ } ;
+__p += '\n            ';
+ if (subtasks != 0 && calculated_estimated_hours != estimated_hours.estimated_hours) { ;
+__p += '\n              <br><span class="muted">\n                Using <b>custom value</b>. Delete it to use <b>sum of childs</b>.\n              </span>\n            ';
+ } ;
+__p += '\n          <div class="pull-right command">\n            ';
+ if (estimated_hours.editable) { ;
+__p += '\n            <a href=\'javascript:void(0);\' class="delete-estimated-hours btn btn-mini"><i class="fa fa-trash-o"></i></a>\n            ';
+ } ;
+__p += '\n          </div>\n          <div class="pull-right command">\n            <a href=\'javascript:void(0);\' class="set-estimated-hours btn btn-mini"><i class="fa fa-pencil"></i></a>\n          </div>\n        ';
+ } ;
+__p += '\n      </td>\n    </tr>\n    <tr class="change-estimated-hours hide">\n      <td class="interior"></td>\n      <td>\n        ';
+ if (estimated_hours.editable) { ;
+__p += '\n          <div class="pull-left" id="">\n              <input type="text" class="input-estimated-hours" value="' +
+((__t = ( estimated_hours.estimated_hours )) == null ? '' : __t) +
+'" style="width:25px;padding:1px 2px;vertical-align:baseline"> Hours\n          </div>\n          <div class="pull-right">\n            <button class="btn btn-small btn-cancel-change-estimated-hours">Cancel</button>\n            <button class="btn btn-small btn-success btn-save-change-estimated-hours">Save</button>\n          </div>\n          <div class="clearfix"></div>\n        ';
+ } else { ;
+__p += '\n          This is a summary field. Changing it on it\'s subtasks will modify this value\n        ';
+ } ;
+__p += '\n      </td>\n    </tr>\n    ';
+ if (tags.length>0) { ;
+__p += '\n    <tr>\n      <td class="interior">\n        <i class="fa fa-tags fa-fw"></i>\n      </td>\n      <td class="interior">\n        ';
+ _.each(_.pluck(tags,"name"),function(tag){ ;
+__p += '\n          <span class=\'tag label\'>' +
+((__t = ( tag )) == null ? '' : __t) +
+' <span style=\'cursor:pointer\' class=\'delete-tag\' data-tag=\'' +
+((__t = ( tag )) == null ? '' : __t) +
+'\'><b>x</b></span></span>\n        ';
+ }) ;
+__p += '\n        ';
+ if (tags.length==0) { ;
+__p += '\n          <span class="no-tags">No tags</span>\n        ';
+ } ;
+__p += '\n        <div class="pull-right command">\n          <a href=\'javascript:void(0);\' class="add-tag-handler btn btn-mini"><i class="fa fa-plus"></i></a>\n        </div>\n        \n        <span class="tag">\n          <!-- <span class="add-tag-handler">\n            <a href="javascript:void(0);">Add tag</a>\n          </span> -->\n          <span class="add-tag-input hide">\n            <input type=text class="add-tag-autocompleter" style="width: 50px;padding: 2px 5px;vertical-align: baseline;"> <img src="/img/spinner.gif" class="typeahead-tag-loading" style="display:none;width:16px">\n          </span>\n        </span>\n      </td>\n    </tr>\n    ';
+ } ;
+__p += '\n    ';
+ if (tags.length==0) { ;
+__p += '\n      <tr class="hide add-tag-input">\n        <td class="interior">\n          <i class="fa fa-tags fa-fw"></i>\n        </td>\n        <td class="interior">\n          \n          <span class="tag">\n            <!-- <span class="add-tag-handler">\n              <a href="javascript:void(0);">Add tag</a>\n            </span> -->\n            <span class="add-tag-input">\n              <input type=text class="add-tag-autocompleter" style="width: 50px;padding: 2px 5px;vertical-align: baseline;">\n            </span>\n          </span>\n        </td>\n      </tr>\n    ';
+ } ;
+__p += '\n\n    ';
+ if (parent_tasks.length>0) { ;
+__p += '\n      <tr>\n        <td class="interior">\n          <i class="fa fa-random fa-fw"></i>\n        </td>\n        <td class="interior" style="position:relative;">\n          <a href="javascript:void(0);" data-target="" data-toggle="dropdown">Unlink from predecessor <span class="caret"></span></a>\n          <ul class="dropdown-menu">\n            ';
+ _.each(parent_tasks,function(parent){ ;
+__p += '\n              <li>\n                <a href="javascript:void(0);" class="unlink-parent" data-parent="' +
+((__t = ( parent.id )) == null ? '' : __t) +
+'">Unlink from ' +
+((__t = ( parent.name )) == null ? '' : __t) +
+'</a>\n              </li>\n            ';
+ }) ;
+__p += '\n            ';
+ if (parent_tasks.length > 0) { ;
+__p += '\n              <li>\n                <a href="javascript:void(0);" class="unlink-parent" data-parent="0">Unlink from all</a>\n              </li>\n            ';
+ } ;
+__p += '\n          </ul>\n        </td>\n      </tr>\n    ';
+ } ;
+__p += '\n\n    <tr class="add-subtask-container">\n      <td>\n        <i class="fa fa-plus"></i>\n      </td>\n      <td>\n          <input type=text placeholder="Create subtask...">\n      </td>\n    </tr>\n  </table>\n  \n  <div class="notes-title muted" style="font-size:12px;">\n    <a href="javascript:void(0)" class="pull-right" style="font-weight:normal;margin-right:10px"><i class="fa fa-pencil"></i></a>\n    Description \n  </div>\n  <p class="notes-content">\n    ' +
+((__t = ( notes.nl2br() )) == null ? '' : __t) +
+'\n  </p>\n  <div class="notes-editor hide">\n    <textarea style="height:200px">' +
+((__t = ( notes.trim() )) == null ? '' : __t) +
+'</textarea>\n    <button class="btn btn-small btn-success">Save </button> \n    <button class="btn btn-small btn-cancel">Dismiss </button>\n  </div>\n</div>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/task-list-item-add-handler"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
+function print() { __p += __j.call(arguments, '') }
+with (obj) {
+__p += '<div class="cell cell-action">\n\n</div>\n<div class="cell cell-photo add-task">\n\t<i class="fa fa-plus" style="padding:3px 4px 1px 4px;border-radius:3px;color:#fff;background:#1aa2e4;font-size:10px"></i>\n</div>\n<div class="cell cell-name add-task add-task-section-';
+ if (typeof priority_heading_id != "undefined") {print(priority_heading_id);} else {print("0");} ;
+__p += '" style="color:#AAA">\n\n<input type=text placeholder=\'Create a new task...\'>\n</div>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/task-list-item-sort-handler"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
+function print() { __p += __j.call(arguments, '') }
+with (obj) {
+
+ if (parents == 0) { ;
+__p += '\n\t';
+ if (subtasks == 0) { ;
+__p += '\n\t\t';
+ if (parents == 0) { ;
+__p += '\n\t\t<div class="left-action">\n\t\t\t<a class="sort-handler sort-handler-right">\n\t\t\t\t<i class="fa fa-bars"></i>\n\t\t\t</a>\n\t\t</div>\n\t\t';
+ } ;
+__p += '\n\t';
+ } else { ;
+__p += '\n\t\t<div class="left-action left-action-show-always">\n\t\t\t<a class="sort-handler">\n\t\t\t\t\t<i class="fa fa-bars"></i>\n\t\t\t</a>\n\t\t\t';
+ if (!collapsed) { ;
+__p += '\n\t\t\t\t<a class="toggle-subtasks">\n\t\t\t\t\t<i class="fa fa-minus-square"></i>\n\t\t\t\t</a>\n\t\t\t';
+ } else if (collapsed) { ;
+__p += '\n\t\t\t\t<a class="toggle-subtasks">\n\t\t\t\t\t<i class="fa fa-plus-square"></i>\n\t\t\t\t</a>\n\t\t\t';
+ } ;
+__p += '\n\t\t</div>\n\t';
+ } ;
+__p += '\n';
+ } ;
+__p += '\n';
+ if (parents > 0) { ;
+__p += '\n\t';
+ if (subtasks > 0) { ;
+__p += '\n\t\t';
+ if (!collapsed) { ;
+__p += '\n\t\t<div class="left-action left-action-show-always">\n\t\t\t<a class="sort-handler">\n\t\t\t\t\t<i class="fa fa-bars"></i>\n\t\t\t</a>\n\t\t\t<a class="toggle-subtasks">\n\t\t\t\t<i class="fa fa-minus-square"></i>\n\t\t\t</a>\n\t\t</div>\n\t\t';
+ } else if (collapsed) { ;
+__p += '\n\t\t<div class="left-action left-action-show-always">\n\t\t\t<a class="sort-handler">\n\t\t\t\t\t<i class="fa fa-bars"></i>\n\t\t\t</a>\n\t\t\t<a class="toggle-subtasks">\n\t\t\t\t<i class="fa fa-plus-square"></i>\n\t\t\t</a>\n\t\t</div>\n\t\t';
+ } ;
+__p += '\n\t';
+ } else { ;
+__p += '\n\t\t<div class="left-action">\n\t\t\t<a class="sort-handler sort-handler-right">\n\t\t\t\t\t<i class="fa fa-bars"></i>\n\t\t\t</a>\n\t\t</div>\n\t';
+ } ;
+__p += '\n';
+ } ;
+
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/task-list-item-tool"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div class="controls" style="">\n\t<i class="fa fa-caret-right" style=""></i>\n</div>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/task-list-item"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
+function print() { __p += __j.call(arguments, '') }
+with (obj) {
+
+ if (!is_priority_heading && !is_project) { ;
+__p += '\n  <div class="' +
+((__t = ( indent )) == null ? '' : __t) +
+' task-inline-menu">\n    <div class="task-inline-menu-background"></div>\n    <div class="action new-sibling-task">\n      <i class="fa fa-plus"></i> <span class="task-inline-menu-hidden">New sibling task</span>\n    </div>\n  </div>\n\n  \n  <div class="cell cell-action">\n    ';
+ if (typeof completed != "undefined" && (completed == "true" || completed==true)) { ;
+__p += '\n      <span><i class="toggle-completed fa fa-check-square-o"></i></span>\n    ';
+ } else { ;
+__p += '\n    <a href="javascript:void(0)" class="discrete">\n    <!-- <input type="checkbox" data-id="' +
+((__t = ( id )) == null ? '' : __t) +
+'"> -->\n    <i class="toggle-completed fa fa-square-o"></i>\n    </a>\n    ';
+ } ;
+__p += '\n  </div>\n  <div class="cell cell-photo">\n  ';
+ if (user != "" && user.photo) { ;
+__p += '\n    <a href="#" class="tooltip-handler" data-toggle="tooltip" data-placement="top" title="' +
+((__t = ( user.name )) == null ? '' : __t) +
+'">\n    <img src=\'' +
+((__t = ( user.photo.image_60x60 )) == null ? '' : __t) +
+'\' class=\'assigned-photo\'>\n    </a>\n  ';
+ } ;
+__p += '\n\n  ';
+ if (user != "" && !user.photo) { ;
+__p += '\n    <a href="#" class="tooltip-handler" data-toggle="tooltip" data-placement="top" title="' +
+((__t = ( user.name )) == null ? '' : __t) +
+'">\n    <div class="non-photo"> ';
+ print(nameAbbreviation(user.name)) ;
+__p += ' </div>\n    </a>\n  ';
+ } ;
+__p += '\n\n  ';
+ if (user == "") { ;
+__p += '\n    <div class="unassigned-photo"><i class="icon icon-user"></i></div>\n  ';
+ } ;
+__p += '\n  </div>\n  <div class="cell pull-right cell-osx-firefox-fix"></div>\n  <div class="cell pull-right cell-percentage cell-editable sglclick" data-attribute="progress" data-type="percentage" ';
+ if (subtasks!="" && subtasks!=0) {print('data-blocked=true data-toggle="tooltip" title="This is a summary cell" data-trigger="click"')} ;
+__p += '>\n    ';
+ if (progress!="") { ;
+__p += '\n        ' +
+((__t = ( progress )) == null ? '' : __t) +
+'\n    ';
+ } else { ;
+__p += '\n      0%\n    ';
+ } ;
+__p += '\n  </div>\n  <div class="cell pull-right cell-due cell-editable sglclick" data-attribute="due" data-type="daterange" ';
+ if (subtasks!="" && subtasks!=0) {print('data-blocked=true data-toggle="tooltip" title="This is a summary cell" data-trigger="click"')} ;
+__p += '>\n    ';
+ if (due!="" && start!= "") { ;
+__p += '\n        ' +
+((__t = ( moment(due).format("DD/MMM") )) == null ? '' : __t) +
+'\n    ';
+ } ;
+__p += '\n  </div>\n  <div class="cell pull-right cell-duration cell-editable sglclick" data-blocked=true data-toggle="tooltip" title="Duration is calculated automatically from start and due date" data-trigger="click">\n    ';
+ if (due!="" && start != "") { ;
+__p += '\n        ' +
+((__t = ( daysDiff(moment(due),moment(start))+1 )) == null ? '' : __t) +
+'d\n    ';
+ } ;
+__p += '\n  </div>\n  <div class="cell pull-right cell-workingdaysduration cell-editable sglclick" data-blocked=true data-toggle="tooltip" title="Duration is calculated automatically from start and due date" data-trigger="click">\n    ';
+ if (due!="" && start != "") { ;
+__p += '\n        ' +
+((__t = ( workingDaysLength(moment(start).toDate(),moment(due).toDate())+1 )) == null ? '' : __t) +
+'d\n    ';
+ } ;
+__p += '\n  </div>\n  <div class="cell pull-right cell-start cell-editable sglclick" data-attribute="start" data-type="daterange" data-linked=".cell-due" ';
+ if (subtasks!="" && subtasks!=0) {print('data-blocked=true data-toggle="tooltip" title="This is a summary cell" data-trigger="click"')} ;
+__p += '>\n    ';
+ if (start!="") { ;
+__p += '\n        ' +
+((__t = ( moment(start).format("DD/MMM") )) == null ? '' : __t) +
+'\n    ';
+ } ;
+__p += '\n  </div>\n  <div class="cell pull-right cell-estimatedhours cell-editable sglclick" data-attribute="estimated_hours" data-type="number" ';
+ if (!estimated_hours.editable) {print('data-blocked=true data-toggle="tooltip" title="This is a summary cell" data-trigger="click"')} ;
+__p += '>\n    ';
+ if (estimated_hours.estimated_hours!="") { ;
+__p += '\n        ' +
+((__t = ( estimated_hours.estimated_hours )) == null ? '' : __t) +
+'h\n    ';
+ } else { ;
+__p += '\n        -\n    ';
+ } ;
+__p += '\n  </div>\n  <div class="cell pull-right cell-assignee cell-editable sglclick" data-attribute="user" data-type="assignee">\n    ';
+ user.name ? print(user.name) : print("Unassigned") ;
+__p += '\n  </div>\n  <div class="cell pull-right cell-subtasks">\n    ';
+ if (subtasks!="" && collapsed) { ;
+__p += '\n        <i class="fa fa-list-ul"></i> ' +
+((__t = ( subtasks )) == null ? '' : __t) +
+'\n    ';
+ } ;
+__p += '\n  </div>\n\n  <div class="cell cell-name cell-editable inspectlet-sensitive dblclick" data-attribute="name" data-type="text">\n    ';
+ if (id==0) { ;
+__p += '\n      <img src=\'/img/loading-white.gif\'> \n    ';
+ } ;
+__p += '\n    ';
+ if (is_subsection) { ;
+__p += '\n      <b>' +
+((__t = ( name )) == null ? '' : __t) +
+'</b>\n    ';
+ } else { ;
+__p += '\n        ' +
+((__t = ( name )) == null ? '' : __t) +
+'\n    ';
+ } ;
+__p += '\n  </div>\n';
+ } else if (!is_project) { ;
+__p += '\n  <div class="left-action left-action-show-always">\n    <div class="collapser">\n        ';
+ if (collapsed_section) { ;
+__p += '\n          <i class="fa fa-plus-square"></i>\n        ';
+ } else { ;
+__p += '\n          <i class="fa fa-minus-square"></i>\n        ';
+ } ;
+__p += '\n    </div>\n  </div>\n  <div class="cell pull-right cell-osx-firefox-fix"></div>\n  <div class="cell pull-right cell-percentage">\n    ';
+ if (progress!="") { ;
+__p += '\n        ' +
+((__t = ( progress )) == null ? '' : __t) +
+'\n    ';
+ } else { ;
+__p += '\n      0%\n    ';
+ } ;
+__p += '\n  </div>\n  \n  <div class="cell pull-right cell-due">\n    ';
+ if (due!="" && start!= "") { ;
+__p += '\n        ';
+ if (moment(due)==null) {console.log(due+" - "+start);} ;
+__p += '\n        ' +
+((__t = ( moment(due).format("DD/MMM") )) == null ? '' : __t) +
+'\n    ';
+ } ;
+__p += '\n  </div>\n  <div class="cell pull-right cell-duration">\n    ';
+ if (due!="" && start != "") { ;
+__p += '\n        ' +
+((__t = ( daysDiff(moment(due),moment(start))+1 )) == null ? '' : __t) +
+'d\n    ';
+ } ;
+__p += '\n  </div>\n  <div class="cell pull-right cell-workingdaysduration">\n    ';
+ if (due!="" && start!="") { ;
+__p += '\n        ' +
+((__t = ( workingDaysLength(moment(start).toDate(),moment(due).toDate())+1 )) == null ? '' : __t) +
+'d\n    ';
+ } ;
+__p += '\n  </div>\n  <div class="cell pull-right cell-start">\n    ';
+ if (start!="") { ;
+__p += '\n        ' +
+((__t = ( moment(start).format("DD/MMM") )) == null ? '' : __t) +
+'\n    ';
+ } ;
+__p += '\n  </div>\n  <div class="cell pull-right cell-estimatedhours cell-editable sglclick" data-attribute="estimated_hours" data-type="number" data-blocked=true data-toggle="tooltip" title="This is a summary cell" data-trigger="click">\n    ';
+ if (estimated_hours.estimated_hours!="") { ;
+__p += '\n        ' +
+((__t = ( estimated_hours.estimated_hours )) == null ? '' : __t) +
+'h\n    ';
+ } else { ;
+__p += '\n        -\n    ';
+ } ;
+__p += '\n  </div>\n\n  <div class="cell pull-right cell-assignee">\n    \n  </div>\n  \n  <div class="cell pull-right cell-subtasks">\n    ';
+ if (subtasks!="" && collapsed) { ;
+__p += '\n        <i class="fa fa-list-ul"></i> ' +
+((__t = ( subtasks )) == null ? '' : __t) +
+'\n    ';
+ } ;
+__p += '\n  </div>\n    \n    <span class="">';
+ if (is_group && projects[0]) { ;
+__p += ' ' +
+((__t = ( projects[0].name )) == null ? '' : __t) +
+' - ';
+ } ;
+__p += '</span> ' +
+((__t = ( name )) == null ? '' : __t) +
+'\n';
+ } else { ;
+__p += '\n    <div class="left-action left-action-show-always">\n      <div class="collapser">\n        ';
+ if (collapsed_section) { ;
+__p += '\n          <i class="fa fa-folder-o"></i>\n        ';
+ } else { ;
+__p += '\n          <i class="fa fa-folder-open-o"></i>\n        ';
+ } ;
+__p += '\n      </div>\n    </div>\n    <div class="cell pull-right cell-osx-firefox-fix"></div>\n    <div class="cell pull-right cell-percentage">\n    ';
+ if (progress!="") { ;
+__p += '\n        ' +
+((__t = ( progress )) == null ? '' : __t) +
+'\n    ';
+ } else { ;
+__p += '\n      0%\n    ';
+ } ;
+__p += '\n  </div>\n  \n  <div class="cell pull-right cell-due">\n    ';
+ if (due!="" && start!= "") { ;
+__p += '\n        ';
+ if (moment(due)==null) {console.log(due+" - "+start);} ;
+__p += '\n        ' +
+((__t = ( moment(due).format("DD/MMM") )) == null ? '' : __t) +
+'\n    ';
+ } ;
+__p += '\n  </div>\n  <div class="cell pull-right cell-duration">\n    ';
+ if (due!="" && start != "") { ;
+__p += '\n        ' +
+((__t = ( daysDiff(moment(due),moment(start))+1 )) == null ? '' : __t) +
+'d\n    ';
+ } ;
+__p += '\n  </div>\n  <div class="cell pull-right cell-workingdaysduration">\n    ';
+ if (due!="" && start!="") { ;
+__p += '\n        ' +
+((__t = ( workingDaysLength(moment(start).toDate(),moment(due).toDate())+1 )) == null ? '' : __t) +
+'d\n    ';
+ } ;
+__p += '\n  </div>\n  <div class="cell pull-right cell-start">\n    ';
+ if (start!="") { ;
+__p += '\n        ' +
+((__t = ( moment(start).format("DD/MMM") )) == null ? '' : __t) +
+'\n    ';
+ } ;
+__p += '\n  </div>\n  <div class="cell pull-right cell-estimatedhours cell-editable sglclick" data-attribute="estimated_hours" data-type="number" data-blocked=true data-toggle="tooltip" title="This is a summary cell" data-trigger="click">\n    ';
+ if (estimated_hours.estimated_hours!="") { ;
+__p += '\n        ' +
+((__t = ( estimated_hours.estimated_hours )) == null ? '' : __t) +
+'h\n    ';
+ } else { ;
+__p += '\n        -\n    ';
+ } ;
+__p += '\n  </div>\n  <div class="cell pull-right cell-assignee">\n    \n  </div>\n  <div class="cell pull-right cell-subtasks">\n  </div>\n    ' +
+((__t = ( name )) == null ? '' : __t) +
+' \n';
+ } ;
+
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/task-multiple-details-content"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
+function print() { __p += __j.call(arguments, '') }
+with (obj) {
+__p += '<div class="title" style="border-bottom:0px solid #ccc;height:20px;padding:10px 20px;border-bottom:1px solid #efefef">\n  <div style="font-size:11px;color:#555;font-weight:normal" class="pull-left">\n    \n    <div class="title-menu dropdown" style="display:inline-block" data-toggle="tooltip" data-placement="bottom" title="Color">\n      \n        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" style="">\n          <i class="fa fa-tint fa-fw"></i>\n        </a>\n        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" style="">\n          <li>\n            <a href="#" data-color="" class="set-color">\n              Default\n              <div class="muted">\n                <div class="color-box-mini color-ontime pull-left"></div> On time <div class="clearfix"></div>\n                <div class="color-box-mini color-overdue pull-left"></div> Overdue <div class="clearfix"></div>\n                <div class="color-box-mini color-completed pull-left"></div> Completed <div class="clearfix"></div>\n              </div>\n            </a>\n          </li>\n          <li class="divider"></li>\n          <li style="padding-left:10px">\n            \n              <div class="dark-pink pull-left color-box set-color" data-color="dark-pink"></div>\n            \n              <div class="dark-green pull-left color-box set-color" data-color="dark-green"></div>\n            \n              <div class="dark-blue pull-left color-box set-color" data-color="dark-blue"></div>\n            \n              <div class="dark-red pull-left color-box set-color" data-color="dark-red"></div>\n            \n              <div class="dark-teal pull-left color-box set-color" data-color="dark-teal"></div>\n            \n              <div class="dark-brown pull-left color-box set-color" data-color="dark-brown"></div>\n            \n              <div class="dark-orange pull-left color-box set-color" data-color="dark-orange"></div>\n            \n              <div class="dark-purple pull-left color-box set-color" data-color="dark-purple"></div>\n            \n              <div class="dark-warm-gray pull-left color-box set-color" data-color="dark-warm-gray"></div>\n\n              <div class="light-green pull-left color-box set-color" data-color="light-green"></div>\n            \n              <div class="light-blue pull-left color-box set-color" sdata-color="light-blue"></div>\n            \n              <div class="light-red pull-left color-box set-color" data-color="light-red"></div>\n            \n              <div class="light-teal pull-left color-box set-color" data-color="light-teal"></div>\n            \n              <div class="light-orange pull-left color-box set-color" data-color="light-orange"></div>\n            \n              <div class="light-purple pull-left color-box set-color" data-color="light-purple"></div>\n            \n            \n          </li>\n        </ul>\n      \n    </div>\n    \n    <div class="title-menu dropdown" style="display:inline-block" data-toggle="tooltip" data-placement="bottom" title="Progress">\n      \n        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" style="">\n          <i class="fa fa-refresh fa-fw"></i>\n        </a>\n        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">\n          <li><a href="javascript:void(0);" class="set-progress" data-progress="0%">0%</a></li>\n          <li><a href="javascript:void(0);" class="set-progress" data-progress="10%">10%</a></li>\n          <li><a href="javascript:void(0);" class="set-progress" data-progress="20%">20%</a></li>\n          <li><a href="javascript:void(0);" class="set-progress" data-progress="30%">30%</a></li>\n          <li><a href="javascript:void(0);" class="set-progress" data-progress="40%">40%</a></li>\n          <li><a href="javascript:void(0);" class="set-progress" data-progress="50%">50%</a></li>\n          <li><a href="javascript:void(0);" class="set-progress" data-progress="60%">60%</a></li>\n          <li><a href="javascript:void(0);" class="set-progress" data-progress="70%">70%</a></li>\n          <li><a href="javascript:void(0);" class="set-progress" data-progress="80%">80%</a></li>\n          <li><a href="javascript:void(0);" class="set-progress" data-progress="90%">90%</a></li>\n          <li><a href="javascript:void(0);" class="set-progress" data-progress="100%">100%</a></li>\n        </ul>\n      \n    </div>\n    <div class="title-menu add-tag-handler" style="display:inline-block"  data-toggle="tooltip" data-placement="bottom" title="Tags">\n      <a href="javascript:void(0);">\n        <i class="fa fa-tags fa-fw"></i>\n      </a>\n    </div>\n\n  </div>\n  <div style="font-size:11px;color:#888;cursor:pointer" class="close-task-details pull-right">\n    <i class="icon icon-remove"></i>\n  </div>\n  <div style="clear:both"></div>\n</div>\n<div class="inner-content">\n  <table class="table task-name">\n    <tr>\n      <td>\n        \n      </td>\n      <td>\n        <div class="task-name-info">\n          <h4>\n            ' +
+((__t = ( App.Variables.active_tasks.length )) == null ? '' : __t) +
+' tasks selected \n          </h4>\n        </div>\n      </td>\n    </tr>\n  </table>\n  <table class="table task-values">\n\n    <tr>\n      <td class="">\n        <i class="fa fa-user fa-fw">\n      </td>\n      <td class="">\n        <div class="current-user">\n          Assignee\n          \n          <div class="pull-right command">\n            <a href=\'javascript:void(0);\' class="change-user-handler btn btn-mini"><i class="fa fa-pencil"></i></a>\n          </div>\n        </div>\n        <div class="change-user-container" style="display:none">\n          <!-- <input type=text class="change-user-input" style="width: 100px;padding: 2px 5px;vertical-align: baseline;margin:0"> -->\n          <input type=text class="change-user-input" style="width: 100px;padding: 2px 5px;vertical-align: baseline;margin:0">\n          <button class="btn btn-small btn-unassigned">Unassigned</button> <img src="/img/spinner.gif" class="typeahead-user-loading" style="display:none;width:16px">\n        </div>\n      </td>\n    </tr>\n\n    <tr>\n      <td class="interior">\n        <i class="fa fa-calendar fa-fw"></i>\n      </td>\n      <td class="interior">\n          <div class="pull-right command">\n              <a href=\'javascript:void(0);\' class="set-dates btn btn-mini"><i class="fa fa-pencil"></i></a>\n          </div>\n          Schedule\n      </td>\n    </tr>\n    <tr class="change-dates hide">\n      <td class="interior"></td>\n      <td>\n        <div class="input-daterange" id="datepicker">\n            <input type="text" class="input-small" name="start" value=""/>\n            <span class="add-on">to</span>\n            <input type="text" class="input-small" name="end" value="" />\n        </div>\n        <div>\n          <div class="pull-right">\n            <button class="btn btn-small btn-cancel-change-dates">Cancel</button>\n            <button class="btn btn-small btn-success btn-save-change-dates">Save</button>\n          </div>\n          <div class="clearfix"></div>\n        </div>\n      </td>\n    </tr>\n    <tr>\n      <td class="interior">\n        <i class="fa fa-clock-o fa-fw"></i>\n      </td>\n      <td class="interior">\n          <div class="pull-right command">\n              <a href=\'javascript:void(0);\' class="set-estimated-hours btn btn-mini"><i class="fa fa-pencil"></i></a>\n          </div>\n          Estimated hours\n      </td>\n    </tr>\n    <tr class="change-estimated-hours hide">\n      <td class="interior"></td>\n      <td>\n        <div class="pull-left" id="">\n            <input type="text" class="input-estimated-hours" value="' +
+((__t = ( estimated_hours )) == null ? '' : __t) +
+'" style="width:25px;padding:1px 2px;vertical-align:baseline"> Hours\n        </div>\n        <div class="pull-right">\n          <button class="btn btn-small btn-cancel-change-estimated-hours">Cancel</button>\n          <button class="btn btn-small btn-success btn-save-change-estimated-hours">Save</button>\n        </div>\n        <div class="clearfix"></div>\n      </td>\n    </tr>\n    ';
+ if (tags.length>0) { ;
+__p += '\n    <tr>\n      <td class="interior">\n        <i class="fa fa-tags fa-fw"></i>\n      </td>\n      <td class="interior">\n        ';
+ _.each(_.pluck(tags,"name"),function(tag){ ;
+__p += '\n          <span class=\'tag label\'>' +
+((__t = ( tag )) == null ? '' : __t) +
+' <span style=\'cursor:pointer\' class=\'delete-tag\' data-tag=\'' +
+((__t = ( tag )) == null ? '' : __t) +
+'\'><b>x</b></span></span>\n        ';
+ }) ;
+__p += '\n        ';
+ if (tags.length==0) { ;
+__p += '\n          <span class="no-tags">No tags</span>\n        ';
+ } ;
+__p += '\n        <div class="pull-right command">\n          <a href=\'javascript:void(0);\' class="add-tag-handler btn btn-mini"><i class="fa fa-plus"></i></a>\n        </div>\n        \n        <span class="tag">\n          <!-- <span class="add-tag-handler">\n            <a href="javascript:void(0);">Add tag</a>\n          </span> -->\n          <span class="add-tag-input hide">\n            <input type=text class="add-tag-autocompleter" style="width: 50px;padding: 2px 5px;vertical-align: baseline;"> <img src="/img/spinner.gif" class="typeahead-tag-loading" style="display:none;width:16px">\n          </span>\n        </span>\n      </td>\n    </tr>\n    ';
+ } ;
+__p += '\n    ';
+ if (tags.length==0) { ;
+__p += '\n      <tr class="hide add-tag-input">\n        <td class="interior">\n          <i class="fa fa-tags fa-fw"></i>\n        </td>\n        <td class="interior">\n          \n          <span class="tag">\n            <!-- <span class="add-tag-handler">\n              <a href="javascript:void(0);">Add tag</a>\n            </span> -->\n            <span class="add-tag-input">\n              <input type=text class="add-tag-autocompleter" style="width: 50px;padding: 2px 5px;vertical-align: baseline;">\n            </span>\n          </span>\n        </td>\n      </tr>\n    ';
+ } ;
+__p += '\n\n  </table>\n  \n</div>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/workload-bar-content"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
+function print() { __p += __j.call(arguments, '') }
+with (obj) {
+__p += '<div class="workload-bar-inner card" title="<div style=\'text-align:left\'>';
+ if (projects.length>0) { ;
+__p += '<span class=\'muted\'>' +
+((__t = ( projects[0].name )) == null ? '' : __t) +
+'</span> <br>';
+ } ;
+__p +=
+((__t = ( name.replace(/"/g, '').replace(/'/g,'') )) == null ? '' : __t) +
+' ';
+ if (estimated_hours > 0) { print("("+estimated_hours+" hrs)");};
+__p += '</div>" data-toggle="tooltip" data-placement="right">\n';
+ if (progress) { ;
+__p += '\n\t<div class="bar-progress">\n\t\t<div class="bar-progress-inner ' +
+((__t = ( status_class )) == null ? '' : __t) +
+' ' +
+((__t = ( completion_status_class )) == null ? '' : __t) +
+'" style="width:' +
+((__t = ( progress )) == null ? '' : __t) +
+'%"></div>\n\t</div>\n';
+ } else { ;
+__p += '\n\t<div class="bar-progress">\n\t\t<div class="bar-progress-inner ' +
+((__t = ( status_class )) == null ? '' : __t) +
+' ' +
+((__t = ( completion_status_class )) == null ? '' : __t) +
+'" style="width:0%"></div>\n\t</div>\n';
+ } ;
+__p += '\n<div class="card-text">' +
+((__t = ( name )) == null ? '' : __t) +
+'</div>\n</div>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/workload-bar-milestone-content"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div class="bar-milestone card bar-milestone-' +
+((__t = ( App.Variables.column_width )) == null ? '' : __t) +
+' ' +
+((__t = ( status_class )) == null ? '' : __t) +
+'" title="<div style=\'text-align:left\'>' +
+((__t = ( name )) == null ? '' : __t) +
+'<br><span class=\'muted\'>' +
+((__t = ( notes )) == null ? '' : __t) +
+'</span></div>" data-toggle="popover" data-placement="right">\n</div>';
+
+}
+return __p
+};
+
+this["JST"]["react-bridge/workload-user"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
+function print() { __p += __j.call(arguments, '') }
+with (obj) {
+__p += '<li>\n  <div class="cell cell-photo">\n  ';
+ if (typeof photo != "undefined" && photo && typeof photo.image_60x60 != "undefined") { ;
+__p += '\n    <a href="#">\n    <img src=\'' +
+((__t = ( photo.image_60x60 )) == null ? '' : __t) +
+'\' class=\'assigned-photo\'>\n    </a>\n  ';
+ } ;
+__p += '\n\n  ';
+ if (name && (typeof photo == "undefined" || !photo)) { ;
+__p += '\n    <a href="#">\n    <div class="non-photo"> ';
+ print(nameAbbreviation(name)) ;
+__p += ' </div>\n    </a>\n  ';
+ } ;
+__p += '\n\n  ';
+ if (!name && id) { ;
+__p += '\n    <div class="non-photo"> ';
+ print(nameAbbreviation(email || id)) ;
+__p += ' </div>\n  ';
+ } ;
+__p += '\n\n  ';
+ if (!name && !id) { ;
+__p += '\n    <div class="unassigned-photo"><i class="fa fa-user"></i></div>\n  ';
+ } ;
+__p += '\n  </div>\n  <div class="cell cell-name">\n    ';
+ if (name) { ;
+__p += '\n      ' +
+((__t = ( name )) == null ? '' : __t) +
+'\n    ';
+ } else if (id) { ;
+__p += '\n      ' +
+((__t = ( email || id )) == null ? '' : __t) +
+'\n    ';
+ } else { ;
+__p += '\n      Unassigned\n    ';
+ } ;
+__p += '\n  </div>\n</li>';
+
+}
+return __p
+};

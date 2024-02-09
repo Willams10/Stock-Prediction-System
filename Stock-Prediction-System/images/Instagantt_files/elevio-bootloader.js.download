@@ -1,0 +1,6 @@
+(function () {
+  'use strict';
+
+  var MAIN_V4_URL="https://cdn.elev.io/sdk/main/v4/1698038053545/elevio-main.js",MAIN_URL_LOCALHOST="http://localhost:8080/elevio-main.js",MAIN_V3_URL="https://static.elev.io/js/widget.js",QS_LOCALHOST="elevio-version=localhost",QS_V3="elevio-version=v3",QS_VISUALISER="elevio-envisage",location=window.location.href;function createScriptWithUrl(e){var t=document.createElement("script"),i=document.getElementsByTagName("script")[0];t.type="text/javascript",t.async=1,t.src=e,i.parentNode.insertBefore(t,i);}window.elc?createScriptWithUrl(window.elc):location.indexOf(QS_VISUALISER)>-1||location.indexOf(QS_V3)>-1?createScriptWithUrl(MAIN_V3_URL):location.indexOf(QS_LOCALHOST)>-1?createScriptWithUrl(MAIN_URL_LOCALHOST):createScriptWithUrl(MAIN_V4_URL);
+
+})();

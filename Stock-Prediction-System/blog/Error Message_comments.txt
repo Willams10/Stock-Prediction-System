@@ -1,0 +1,6 @@
+hu (user)
+hi sir, how can i help you? (admin)
+I want to know how to fix my error...... (user)
+Here  is the solution.... (admin)
+i also have a trading error  (user)
+Our system is crashing, it will be fine sooner.. (admin)
